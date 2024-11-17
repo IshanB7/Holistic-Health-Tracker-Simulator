@@ -9,7 +9,7 @@ class Profile {
 public:
     Profile();
     std::array<int, 12> getReading(int) const;
-    void addReading(std::vector<int>);
+    void addReading(std::array<int, 24>);
 
 private:
     std::vector<std::array<int, 12>> readings;
