@@ -5,16 +5,22 @@
 #include <cstdlib>
 #include <ctime>
 
+class RadotechWidget;
+
 class Radotech {
+
+friend class RadotechWidget;
 
 public:
     Radotech();
-    std::array<int, 24> getReading() const;
+    static std::array<int, 24> getReading();
+    static bool on();
 
 private:
-    bool isOn;
-    int battery;
+    static bool isOn;
+    static int battery;
 
-}
+
+};
 
 #endif

@@ -1,9 +1,14 @@
 #include "Radotech.h"
 
-Radotech::Radotech(): isOn(false), battery(100) {}
+bool Radotech::isOn = false;
+int Radotech::battery = 100;
+
+Radotech::Radotech() {}
+
+bool Radotech::on() { return isOn; }
 
 // generates random points for reading
-std::array<int, 24> Radotech::getReading() const {
+std::array<int, 24> Radotech::getReading() {
     std::srand(std::time(0));
     std::array<int, 24> readings;
 
