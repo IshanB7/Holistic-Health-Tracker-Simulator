@@ -20,6 +20,7 @@ SOURCES += \
     Radotech.cpp \
     ui/main.cpp \
     ui/mainwindow.cpp \
+    ui/profileswidget.cpp \
     ui/radotechwidget.cpp
 
 HEADERS += \
@@ -27,10 +28,12 @@ HEADERS += \
     Profile.h \
     Radotech.h \
     ui/mainwindow.h \
+    ui/profileswidget.h \
     ui/radotechwidget.h
 
 FORMS += \
     ui/mainwindow.ui \
+    ui/profileswidget.ui \
     ui/radotechwidget.ui
 
 # Default rules for deployment.
