@@ -18,6 +18,7 @@ public:
 
 private:
     std::vector <std::array <std::pair<int, int>, 24>> readings;
+    std::vector <std::string> readingTimes;
     std::string name;
     static const std::array<std::pair <int, int>, 12> range;
     
