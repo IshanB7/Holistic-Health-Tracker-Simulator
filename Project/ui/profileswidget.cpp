@@ -2,6 +2,7 @@
 #include "ui_profileswidget.h"
 #include "App.h"
 #include <QString>
+#include <iostream>
 
 ProfilesWidget::ProfilesWidget(QWidget *parent)
     : QWidget(parent)
@@ -26,6 +27,8 @@ ProfilesWidget::ProfilesWidget(QWidget *parent)
     connect(ui->deleteButton, SIGNAL (released()), this, SLOT (deleteProfile()));
     connect(ui->saveButton, SIGNAL (released()), this, SLOT (save()));
     // connect(ui->addButton, SIGNAL (released(), this, SLOT (addProfile())));
+    connect(ui->cancelButton, SIGNAL (released()), this, SLOT (cancel()));
+    connect(ui->checkBox, SIGNAL (clicked()), this, SLOT (select()));
 }
 
 ProfilesWidget::~ProfilesWidget()
@@ -56,7 +59,10 @@ void ProfilesWidget::edit() {
     bool b = button == buttons[0];
     ui->deleteButton->setVisible(!b);
     ui->saveButton->setVisible(!b);
+    ui->cancelButton->setVisible(b);
     ui->addButton->setVisible(b);
+    ui->profileLabel->setVisible(!b);
+    ui->checkBox->setVisible(!b);
 
     if (!b) {
         for (int i = 1; i < 6; ++i) {
@@ -67,6 +73,8 @@ void ProfilesWidget::edit() {
         }
         QString name = QString::fromStdString(user->getName());
         ui->nameText->setText(name);
+
+        ui->checkBox->setChecked(user == App::user());
     }
     ui->stackedWidget->setCurrentIndex(1);
 }
@@ -84,4 +92,16 @@ void ProfilesWidget::deleteProfile() {
 
 void ProfilesWidget::addProfile() {
     reload();
+}
+
+void ProfilesWidget::cancel() {
+    reload();
+}
+
+void ProfilesWidget::select() {
+    if (ui->checkBox->isChecked()) {
+        App::setCurrentProfile(user);
+    } else {
+        ui->checkBox->setChecked(true);
+    }
 }

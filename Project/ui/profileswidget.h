@@ -24,6 +24,8 @@ private slots:
     void save();
     void deleteProfile();
     void addProfile();
+    void select();
+    void cancel();
 
 private:
     Ui::ProfilesWidget *ui;
