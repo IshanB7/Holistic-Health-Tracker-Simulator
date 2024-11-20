@@ -39,7 +39,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true"/>
+     <string notr="true">QTabBar::tab:selected {background-color: blue; color: white;}</string>
     </property>
     <property name="currentIndex">
      <number>0</number>

@@ -472,7 +472,7 @@ border-radius: 15px;</string>
       <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: transparent;</string>
+      <string notr="true">border: none;</string>
      </property>
      <property name="text">
       <string/>
