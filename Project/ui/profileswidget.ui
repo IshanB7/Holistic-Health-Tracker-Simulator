@@ -32,7 +32,7 @@
     <number>1</number>
    </property>
    <widget class="QWidget" name="profiles">
-    <widget class="QPushButton" name="newButton">
+    <widget class="QPushButton" name="newProfileButton">
      <property name="geometry">
       <rect>
        <x>18</x>
@@ -73,7 +73,7 @@ border-radius: 5px;</string>
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="button1">
+    <widget class="QPushButton" name="profile1Button">
      <property name="enabled">
       <bool>true</bool>
      </property>
@@ -118,7 +118,7 @@ padding-left: 5px;</string>
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="button2">
+    <widget class="QPushButton" name="profile2Button">
      <property name="geometry">
       <rect>
        <x>18</x>
@@ -160,7 +160,7 @@ padding-left: 5px;</string>
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="button3">
+    <widget class="QPushButton" name="profile3Button">
      <property name="geometry">
       <rect>
        <x>18</x>
@@ -202,7 +202,7 @@ padding-left: 5px;</string>
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="button4">
+    <widget class="QPushButton" name="profile4Button">
      <property name="geometry">
       <rect>
        <x>18</x>
@@ -244,7 +244,7 @@ padding-left: 5px;</string>
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="button5">
+    <widget class="QPushButton" name="profile5Button">
      <property name="geometry">
       <rect>
        <x>18</x>

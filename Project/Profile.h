@@ -5,6 +5,8 @@
 #include <array>
 #include <string>
 
+#define MAX_PROFILE_NAME_LENGTH 32 // Maximum number of characters in a profile name
+
 class Profile {
 
 public:
