@@ -26,13 +26,9 @@ ProfilesWidget::ProfilesWidget(QWidget *parent)
 
     connect(ui->deleteButton, SIGNAL (released()), this, SLOT (deleteProfile()));
     connect(ui->saveButton, SIGNAL (released()), this, SLOT (save()));
-<<<<<<< HEAD
-    // connect(ui->addButton, SIGNAL (released(), this, SLOT (addProfile())));
+    connect(ui->addButton, SIGNAL (released(), this, SLOT (addProfile())));
     connect(ui->cancelButton, SIGNAL (released()), this, SLOT (cancel()));
     connect(ui->checkBox, SIGNAL (clicked()), this, SLOT (select()));
-=======
-    connect(ui->addButton, SIGNAL (released()), this, SLOT (addProfile()));
->>>>>>> main
 }
 
 ProfilesWidget::~ProfilesWidget()
