@@ -9,15 +9,14 @@ class Profile {
 
 public:
     Profile(std::string);
-    std::array<int, 12> getReading(int) const;
+    const std::array<std::pair<int, int>, 24>& getReading(int) const;
     void addReading(std::array<int, 24>);
     const std::string& getName() const;
 
 private:
-    std::vector<std::array<int, 12>> readings;
-    int latestReading[24];
+    std::vector <std::array <std::pair<int, int>, 24>> readings;
     std::string name;
-    void analyzeReading();
+    static const std::array<std::pair <int, int>, 12> range;
 };
 
 #endif
