@@ -1,6 +1,5 @@
 #include "radotechwidget.h"
 #include "ui_radotechwidget.h"
-#include <QTimer>
 #include <QGraphicsColorizeEffect>
 #include <QColor>
 
@@ -10,18 +9,14 @@ RadotechWidget::RadotechWidget(QWidget *parent)
     , radotech(Radotech())
 {
     ui->setupUi(this);
-    initAll();
+    ui->battery->setValue(radotech.battery);
     connect(ui->power, SIGNAL (released()), this, SLOT (togglePower()));
     connect(ui->drain, SIGNAL (released()), this, SLOT (drainBattery()));
     connect(ui->charge, SIGNAL (released()), this, SLOT (chargeBattery()));
-}
-
-void RadotechWidget::initAll() {
-    ui->battery->setValue(radotech.battery);
-    QTimer* batteryTimer = new QTimer(this);
-    connect(batteryTimer, SIGNAL (timeout()), this, SLOT (decreaseBattery()));
-    batteryTimer->setInterval(2000);
-    batteryTimer->start();
+    // Set up the timer to drain the battery
+    connect(&batteryDrainTimer, SIGNAL (timeout()), this, SLOT (decreaseBattery()));
+    batteryDrainTimer.setInterval(2000); // Bettery will drain by 1% every 2 seconds
+    batteryDrainTimer.start();
 }
 
 RadotechWidget::~RadotechWidget()
