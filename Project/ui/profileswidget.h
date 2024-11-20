@@ -21,11 +21,15 @@ public:
 
 private slots:
     void edit();
+    void save();
+    void deleteProfile();
+    void addProfile();
 
 private:
     Ui::ProfilesWidget *ui;
     QPushButton* buttons[6];
     std::vector<Profile*> users;
+    Profile* user;
 };
 
 #endif // PROFILESWIDGET_H

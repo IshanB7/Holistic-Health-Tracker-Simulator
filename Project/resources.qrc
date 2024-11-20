@@ -11,4 +11,10 @@
     <qresource prefix="">
         <file>images/edit.png</file>
     </qresource>
+    <qresource prefix="">
+        <file>images/select.png</file>
+    </qresource>
+    <qresource prefix="">
+        <file>images/selected.png</file>
+    </qresource>
 </RCC>
