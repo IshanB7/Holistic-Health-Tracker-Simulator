@@ -56,13 +56,15 @@
      <property name="styleSheet">
       <string notr="true">text-align: left;
 background-color: white;
-color: black;</string>
+color: black;
+border-radius: 5px;</string>
      </property>
      <property name="text">
       <string>New Profile</string>
      </property>
      <property name="icon">
-      <iconset theme="QIcon::ThemeIcon::ContactNew"/>
+      <iconset resource="../resources.qrc">
+       <normaloff>:/images/add.png</normaloff>:/images/add.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -98,13 +100,16 @@ color: black;</string>
      <property name="styleSheet">
       <string notr="true">text-align: left;
 background-color: white;
-color: black;</string>
+color: black;
+border-radius: 5px;
+padding-left: 5px;</string>
      </property>
      <property name="text">
       <string/>
      </property>
      <property name="icon">
-      <iconset theme="QIcon::ThemeIcon::ViewFullscreen"/>
+      <iconset resource="../resources.qrc">
+       <normaloff>:/images/edit.png</normaloff>:/images/edit.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -137,13 +142,16 @@ color: black;</string>
      <property name="styleSheet">
       <string notr="true">text-align: left;
 background-color: white;
-color: black;</string>
+color: black;
+border-radius: 5px;
+padding-left: 5px;</string>
      </property>
      <property name="text">
       <string/>
      </property>
      <property name="icon">
-      <iconset theme="QIcon::ThemeIcon::ViewFullscreen"/>
+      <iconset resource="../resources.qrc">
+       <normaloff>:/images/edit.png</normaloff>:/images/edit.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -176,13 +184,16 @@ color: black;</string>
      <property name="styleSheet">
       <string notr="true">text-align: left;
 background-color: white;
-color: black;</string>
+color: black;
+border-radius: 5px;
+padding-left: 5px;</string>
      </property>
      <property name="text">
       <string/>
      </property>
      <property name="icon">
-      <iconset theme="QIcon::ThemeIcon::ViewFullscreen"/>
+      <iconset resource="../resources.qrc">
+       <normaloff>:/images/edit.png</normaloff>:/images/edit.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -215,13 +226,16 @@ color: black;</string>
      <property name="styleSheet">
       <string notr="true">text-align: left;
 background-color: white;
-color: black;</string>
+color: black;
+border-radius: 5px;
+padding-left: 5px;</string>
      </property>
      <property name="text">
       <string/>
      </property>
      <property name="icon">
-      <iconset theme="QIcon::ThemeIcon::ViewFullscreen"/>
+      <iconset resource="../resources.qrc">
+       <normaloff>:/images/edit.png</normaloff>:/images/edit.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -254,13 +268,16 @@ color: black;</string>
      <property name="styleSheet">
       <string notr="true">text-align: left;
 background-color: white;
-color: black;</string>
+color: black;
+border-radius: 5px;
+padding-left: 5px;</string>
      </property>
      <property name="text">
       <string/>
      </property>
      <property name="icon">
-      <iconset theme="QIcon::ThemeIcon::ViewFullscreen"/>
+      <iconset resource="../resources.qrc">
+       <normaloff>:/images/edit.png</normaloff>:/images/edit.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -290,10 +307,52 @@ border-radius: 20px;</string>
      <property name="frameShadow">
       <enum>QFrame::Shadow::Raised</enum>
      </property>
+     <widget class="QPushButton" name="deleteButton">
+      <property name="geometry">
+       <rect>
+        <x>152</x>
+        <y>490</y>
+        <width>110</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: orange;</string>
+      </property>
+      <property name="text">
+       <string>Delete Profile</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="saveButton">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>550</y>
+        <width>381</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: orange;
+color: white;
+border-radius: 15px;</string>
+      </property>
+      <property name="text">
+       <string>Save</string>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
