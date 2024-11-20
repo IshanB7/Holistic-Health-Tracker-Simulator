@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "App.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -17,10 +18,11 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-protected:
-    int num = 69;
+private slots:
+    void reloadTab(int);
 
 private:
     Ui::MainWindow *ui;
+    App app;
 };
 #endif // MAINWINDOW_H

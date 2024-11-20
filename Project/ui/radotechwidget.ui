@@ -41,6 +41,12 @@ border: 1px solid black;</string>
       <height>300</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
     <property name="font">
      <font>
       <italic>false</italic>
@@ -52,7 +58,9 @@ border: 1px solid black;</string>
      <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true"/>
+     <string notr="true">border: none;
+background-color: black;
+color: white;</string>
     </property>
     <property name="value">
      <number>100</number>

@@ -55,9 +55,14 @@
       <string>Measure</string>
      </attribute>
     </widget>
-    <widget class="QWidget" name="profile">
+    <widget class="ProfilesWidget" name="profiles">
      <attribute name="title">
-      <string>Profile</string>
+      <string>Profiles</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="history">
+     <attribute name="title">
+      <string>History</string>
      </attribute>
     </widget>
    </widget>
@@ -78,6 +83,12 @@
    <class>RadotechWidget</class>
    <extends>QWidget</extends>
    <header>radotechwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ProfilesWidget</class>
+   <extends>QWidget</extends>
+   <header>profileswidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
