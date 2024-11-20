@@ -51,12 +51,7 @@ void App::removeProfile(Profile* p) {
         if (profiles[i+1] == nullptr) break;
     }
 
-    for (i = 0; i < 4; ++i) {
-        if (profiles[i] != nullptr) {
-            current = profiles[i];
-            break;
-        }
-    }
+    current = profiles[0];
 }
 
 void App::addProfile(std::string newProfileName) {
