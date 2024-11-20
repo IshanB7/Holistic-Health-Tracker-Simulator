@@ -302,10 +302,7 @@ padding-left: 5px;</string>
 border-radius: 20px;</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::Shape::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Shadow::Raised</enum>
+      <enum>QFrame::NoFrame</enum>
      </property>
      <widget class="QPushButton" name="deleteButton">
       <property name="geometry">
@@ -472,7 +469,7 @@ border-radius: 15px;</string>
       <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: transparent;</string>
+      <string notr="true">border: none;</string>
      </property>
      <property name="text">
       <string/>
