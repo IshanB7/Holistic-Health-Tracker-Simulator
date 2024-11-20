@@ -28,6 +28,7 @@ ProfilesWidget::ProfilesWidget(QWidget *parent)
     connect(ui->saveButton, SIGNAL (released()), this, SLOT (save()));
     connect(ui->addButton, SIGNAL (released()), this, SLOT (addProfile()));
     connect(ui->cancelButton, SIGNAL (released()), this, SLOT (cancel()));
+    connect(ui->backButton, SIGNAL (released()), this, SLOT (cancel()));
     connect(ui->checkBox, SIGNAL (clicked()), this, SLOT (select()));
 }
 
@@ -64,6 +65,7 @@ void ProfilesWidget::edit() {
     ui->profileLabel->setVisible(!b);
     ui->checkBox->setVisible(!b);
 
+    ui->nameText->setText("");
     if (!b) {
         for (int i = 1; i < 6; ++i) {
             if (button == buttons[i]) {
@@ -76,6 +78,7 @@ void ProfilesWidget::edit() {
 
         ui->checkBox->setChecked(user == App::user());
     }
+
     ui->stackedWidget->setCurrentIndex(1);
 }
 
