@@ -2,7 +2,6 @@
 #include "ui_profileswidget.h"
 #include "App.h"
 #include <QString>
-#include <iostream>
 
 ProfilesWidget::ProfilesWidget(QWidget *parent)
     : QWidget(parent)
