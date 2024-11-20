@@ -10,12 +10,12 @@ ProfilesWidget::ProfilesWidget(QWidget *parent)
 {
     ui->setupUi(this);
 
-    buttons[0] = ui->newButton;
-    buttons[1] = ui->button1;
-    buttons[2] = ui->button2;
-    buttons[3] = ui->button3;
-    buttons[4] = ui->button4;
-    buttons[5] = ui->button5;
+    buttons[0] = ui->newProfileButton;
+    buttons[1] = ui->profile1Button;
+    buttons[2] = ui->profile2Button;
+    buttons[3] = ui->profile3Button;
+    buttons[4] = ui->profile4Button;
+    buttons[5] = ui->profile5Button;
 
     connect(buttons[0], SIGNAL (released()), this, SLOT (edit()));
     connect(buttons[1], SIGNAL (released()), this, SLOT (edit()));
@@ -26,9 +26,13 @@ ProfilesWidget::ProfilesWidget(QWidget *parent)
 
     connect(ui->deleteButton, SIGNAL (released()), this, SLOT (deleteProfile()));
     connect(ui->saveButton, SIGNAL (released()), this, SLOT (save()));
+<<<<<<< HEAD
     // connect(ui->addButton, SIGNAL (released(), this, SLOT (addProfile())));
     connect(ui->cancelButton, SIGNAL (released()), this, SLOT (cancel()));
     connect(ui->checkBox, SIGNAL (clicked()), this, SLOT (select()));
+=======
+    connect(ui->addButton, SIGNAL (released()), this, SLOT (addProfile()));
+>>>>>>> main
 }
 
 ProfilesWidget::~ProfilesWidget()
@@ -91,6 +95,11 @@ void ProfilesWidget::deleteProfile() {
 }
 
 void ProfilesWidget::addProfile() {
+    // Get the name string
+    std::string newProfileName = ui->nameText->displayText().toStdString();
+    // Add profile to the app
+    App::addProfile(newProfileName);
+    // Refresh the UI
     reload();
 }
 

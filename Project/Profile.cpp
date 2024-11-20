@@ -5,7 +5,10 @@ const std::array <std::pair<int, int>, 12> Profile::range = {{
     {50, 70}, {40, 55}, {45, 65}, {45, 65}, {40, 60}, {45, 65}
 }};
 
-Profile::Profile(std::string name): name(name) {}
+Profile::Profile(std::string newProfileName) {
+    // Truncate profile name to first 32 characters
+    this->name = newProfileName.substr(0, MAX_PROFILE_NAME_LENGTH - 1);
+}
 
 const std::array<std::pair<int, int>, 24>& Profile::getReading(int i) const{
     return readings.at(i);

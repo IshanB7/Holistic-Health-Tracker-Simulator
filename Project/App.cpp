@@ -51,3 +51,15 @@ void App::removeProfile(Profile* p) {
         if (profiles[i+1] == nullptr) break;
     }
 }
+
+void App::addProfile(std::string newProfileName) {
+    unsigned int i; // Used as a counter
+    // Find first available pointer in the profile array to point to the new profile
+    for (i = 0; i < 5; ++i) {
+        if (profiles[i] == nullptr) {
+            // Found an available pointer, create a new profile object
+            profiles[i] = new Profile(newProfileName);
+            return;
+        }
+    }
+}
