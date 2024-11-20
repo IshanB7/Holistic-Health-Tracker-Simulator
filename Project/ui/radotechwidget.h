@@ -2,6 +2,7 @@
 #define RADOTECHWIDGET_H
 
 #include <QWidget>
+#include <QTimer>
 #include "Radotech.h"
 
 namespace Ui {
@@ -25,7 +26,7 @@ private slots:
 private:
     Ui::RadotechWidget *ui;
     Radotech radotech;
-    void initAll();
+    QTimer batteryDrainTimer; // Timer for draining the battery
 };
 
 #endif // RADOTECHWIDGET_H
