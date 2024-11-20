@@ -9,7 +9,7 @@ ProfilesWidget::ProfilesWidget(QWidget *parent)
 {
     ui->setupUi(this);
 
-    buttons[0] = ui->addButton;
+    buttons[0] = ui->newButton;
     buttons[1] = ui->button1;
     buttons[2] = ui->button2;
     buttons[3] = ui->button3;
@@ -22,6 +22,10 @@ ProfilesWidget::ProfilesWidget(QWidget *parent)
     connect(buttons[3], SIGNAL (released()), this, SLOT (edit()));
     connect(buttons[4], SIGNAL (released()), this, SLOT (edit()));
     connect(buttons[5], SIGNAL (released()), this, SLOT (edit()));
+
+    connect(ui->deleteButton, SIGNAL (released()), this, SLOT (deleteProfile()));
+    connect(ui->saveButton, SIGNAL (released()), this, SLOT (save()));
+    // connect(ui->addButton, SIGNAL (released(), this, SLOT (addProfile())));
 }
 
 ProfilesWidget::~ProfilesWidget()
@@ -47,5 +51,37 @@ void ProfilesWidget::reload() {
 }
 
 void ProfilesWidget::edit() {
+    QPushButton* button = qobject_cast<QPushButton*>(sender());
+
+    bool b = button == buttons[0];
+    ui->deleteButton->setVisible(!b);
+    ui->saveButton->setVisible(!b);
+    ui->addButton->setVisible(b);
+
+    if (!b) {
+        for (int i = 1; i < 6; ++i) {
+            if (button == buttons[i]) {
+                user = users.at(i-1);
+                break;
+            }
+        }
+        QString name = QString::fromStdString(user->getName());
+        ui->nameText->setText(name);
+    }
     ui->stackedWidget->setCurrentIndex(1);
+}
+
+void ProfilesWidget::save() {
+    std::string newName = ui->nameText->displayText().toStdString();
+    user->setName(newName);
+    reload();
+}
+
+void ProfilesWidget::deleteProfile() {
+    App::removeProfile(user);
+    reload();
+}
+
+void ProfilesWidget::addProfile() {
+    reload();
 }
