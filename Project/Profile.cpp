@@ -38,7 +38,8 @@ void Profile::addReading(std::array<int, 24> dataPoints) {
 
     }
 
-    readings.push_back(newAnalysis);
+    if (readings.size() > 10) { readings.pop_back(); }
+    readings.insert(readings.begin(), newAnalysis);
 }
 
 const std::string& Profile::getName() const { return name; }
