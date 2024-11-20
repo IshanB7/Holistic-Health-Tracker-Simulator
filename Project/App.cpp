@@ -7,7 +7,8 @@ Profile* App::current = nullptr;
 
 App::App() {
     profiles[0] = new Profile("Demo");
-    for (int i = 1; i < 5; ++i) profiles[i] = nullptr;
+    profiles[1] = new Profile("Guest");
+    for (int i = 2; i < 5; ++i) profiles[i] = nullptr;
     profiles[0]->addReading(Radotech::getReading());
     current = profiles[0];
 }
@@ -41,13 +42,12 @@ void App::removeProfile(Profile* p) {
     for (; i < 5; ++i) {
         if (profiles[i] == p) {
             delete profiles[i];
-            profiles[i] = nullptr;
             break;
         }
     }
 
     for (; i < 4; ++i) {
-        if (profiles[i+1] == nullptr) break;
         profiles[i] = profiles[i+1];
+        if (profiles[i+1] == nullptr) break;
     }
 }
