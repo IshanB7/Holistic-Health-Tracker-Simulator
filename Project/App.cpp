@@ -61,6 +61,7 @@ void App::addProfile(std::string newProfileName) {
         if (profiles[i] == nullptr) {
             // Found an available pointer, create a new profile object
             profiles[i] = new Profile(newProfileName);
+            if (current == nullptr) current = profiles[i];
             return;
         }
     }
