@@ -9,7 +9,6 @@ App::App() {
     profiles[0] = new Profile("Demo");
     for (int i = 1; i < 5; ++i) profiles[i] = nullptr;
     profiles[0]->addReading(Radotech::getReading());
-    // profiles[0]->addReading(Radotech::getReading());
 }
 
 App::~App() {
