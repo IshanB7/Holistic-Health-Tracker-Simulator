@@ -39,3 +39,5 @@ void Profile::addReading(std::array<int, 24> dataPoints) {
 }
 
 const std::string& Profile::getName() const { return name; }
+
+void Profile::setName(std::string newName) { name = newName; }

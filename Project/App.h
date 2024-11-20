@@ -11,11 +11,12 @@ public:
     ~App();
     static std::vector<Profile*> users();
     static Profile* user();
-    static void setCurrentProfile(int);
+    static void setCurrentProfile(Profile*);
+    static void removeProfile(Profile*);
 
 private:
     static Profile* profiles[5];
-    static int currentProfile;
+    static Profile* current;
 
 };
 

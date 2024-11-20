@@ -12,6 +12,7 @@ public:
     const std::array<std::pair<int, int>, 24>& getReading(int) const;
     void addReading(std::array<int, 24>);
     const std::string& getName() const;
+    void setName(std::string);
 
 private:
     std::vector <std::array <std::pair<int, int>, 24>> readings;
