@@ -1,0 +1,11 @@
+release/App.o
+release/Profile.o
+release/Radotech.o
+release/main.o
+release/mainwindow.o
+release/profileswidget.o
+release/radotechwidget.o
+release/qrc_resources.o
+release/moc_mainwindow.o
+release/moc_profileswidget.o
+release/moc_radotechwidget.o

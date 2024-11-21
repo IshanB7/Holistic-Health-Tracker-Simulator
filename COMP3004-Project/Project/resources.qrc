@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="">
+        <file>images/power.png</file>
+    </qresource>
+    <qresource prefix="">
+        <file>images/device.png</file>
+    </qresource>
+    <qresource prefix="">
+        <file>images/add.png</file>
+    </qresource>
+    <qresource prefix="">
+        <file>images/edit.png</file>
+    </qresource>
+    <qresource prefix="">
+        <file>images/back.png</file>
+    </qresource>
+</RCC>
