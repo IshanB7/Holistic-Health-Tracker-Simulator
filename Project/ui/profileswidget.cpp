@@ -16,6 +16,14 @@ ProfilesWidget::ProfilesWidget(QWidget *parent)
     buttons[4] = ui->profile4Button;
     buttons[5] = ui->profile5Button;
 
+    currentButtons[0] = ui->current1;
+    currentButtons[1] = ui->current2;
+    currentButtons[2] = ui->current3;
+    currentButtons[3] = ui->current4;
+    currentButtons[4] = ui->current5;
+
+    for (QPushButton* b : currentButtons) { b->setAttribute(Qt::WA_TransparentForMouseEvents); }
+
     connect(buttons[0], SIGNAL (released()), this, SLOT (edit()));
     connect(buttons[1], SIGNAL (released()), this, SLOT (edit()));
     connect(buttons[2], SIGNAL (released()), this, SLOT (edit()));
@@ -38,6 +46,7 @@ ProfilesWidget::~ProfilesWidget()
 
 void ProfilesWidget::reload() {
     ui->stackedWidget->setCurrentIndex(0);
+    Profile* current = App::user();
 
     users = App::users();
     buttons[0]->setVisible(users.size() < 5);
@@ -47,10 +56,14 @@ void ProfilesWidget::reload() {
         QString name = QString::fromStdString(p->getName());
         buttons[i]->setText(name);
         buttons[i]->setVisible(true);
+        currentButtons[i-1]->setVisible(p == current);
         ++i;
     }
 
-    for (; i < 6; ++i) { buttons[i]->setVisible(false); }
+    for (; i < 6; ++i) {
+        buttons[i]->setVisible(false);
+        currentButtons[i-1]->setVisible(false);
+    }
 }
 
 void ProfilesWidget::edit() {

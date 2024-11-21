@@ -30,6 +30,7 @@ private slots:
 private:
     Ui::ProfilesWidget *ui;
     QPushButton* buttons[6];
+    QPushButton* currentButtons[5];
     std::vector<Profile*> users;
     Profile* user;
 };
