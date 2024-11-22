@@ -26,10 +26,10 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 181, 104);</string>
+    <string notr="true">background: qlineargradient(spread:pad, x1:0.493074, y1:0.818182, x2:0.487685, y2:0.153409, stop:0 rgba(240, 77, 21, 255), stop:0.881773 rgba(244, 131, 0, 255))</string>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="profiles">
     <widget class="QPushButton" name="newProfileButton">
@@ -619,7 +619,8 @@ border-radius: 15px;</string>
       <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="styleSheet">
-      <string notr="true">border: none;</string>
+      <string notr="true">border: none;
+background: transparent;</string>
      </property>
      <property name="text">
       <string/>
