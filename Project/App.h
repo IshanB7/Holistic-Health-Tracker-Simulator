@@ -18,9 +18,11 @@ public:
 private:
     // TODO: refactor so that the enumber of profiles is not hardcoded to 5
     // This value is also assumed in other classes so they will also need to be modified
-    static Profile* profiles[5];
+    // git testing
+	//
+	static Profile* profiles[5];
     static Profile* current;
-
+	static ignore;
 };
 
 #endif
