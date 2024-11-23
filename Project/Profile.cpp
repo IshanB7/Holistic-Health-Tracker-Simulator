@@ -52,7 +52,7 @@ void Profile::addReading(std::array<int, 24> dataPoints) {
     std::time_t now_time = std::chrono::system_clock::to_time_t(now);
     std::tm local_time = *std::localtime(&now_time);
     std::ostringstream oss;
-    oss << std::put_time(&local_time, "%d-%m %H:%M:%0S");
+    oss << std::put_time(&local_time, "%d-%m %H:%M:%S");
     readingTimes.insert(readingTimes.begin(), oss.str());
     std::cout << oss.str() << std::endl;
 }
