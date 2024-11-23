@@ -9,6 +9,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     ui->tabWidget->setCurrentIndex(0);
+    ui->measure->reload();
     connect(ui->tabWidget, SIGNAL (currentChanged(int)), this, SLOT (reloadTab(int)));
 }
 
@@ -18,6 +19,7 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::reloadTab(int i) {
-    if (i == 1) ui->profiles->reload();
+    if (i == 0) ui->measure->reload();
+    else if (i == 1) ui->profiles->reload();
     // else if (i == 2) ui->history->reload();
 }
