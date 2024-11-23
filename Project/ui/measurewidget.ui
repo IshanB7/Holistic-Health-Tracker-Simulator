@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MeasureWidget</class>
+ <widget class="QWidget" name="MeasureWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>444</width>
+    <height>671</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QStackedWidget" name="stackedWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>444</width>
+     <height>671</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: qlineargradient(spread:pad, x1:0.493074, y1:0.818182, x2:0.487685, y2:0.153409, stop:0 rgba(240, 77, 21, 255), stop:0.881773 rgba(244, 131, 0, 255))</string>
+   </property>
+   <widget class="QWidget" name="errorPage">
+    <property name="styleSheet">
+     <string notr="true">background: qlineargradient(spread:pad, x1:0.493074, y1:0.818182, x2:0.487685, y2:0.153409, stop:0 rgba(140, 35, 13, 255), stop:0.881773 rgba(196,107,4, 255))</string>
+    </property>
+    <widget class="QFrame" name="errorFrame">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>260</y>
+       <width>300</width>
+       <height>140</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: white;
+border-radius: 20px;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Shape::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Shadow::Raised</enum>
+     </property>
+     <widget class="QLabel" name="errorLabel">
+      <property name="geometry">
+       <rect>
+        <x>25</x>
+        <y>15</y>
+        <width>250</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: none;
+color: darkorange;</string>
+      </property>
+      <property name="text">
+       <string>ABCD</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="okButton">
+      <property name="geometry">
+       <rect>
+        <x>9</x>
+        <y>90</y>
+        <width>280</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: darkorange;
+border-radius: 5px;
+color: white;</string>
+      </property>
+      <property name="text">
+       <string>Ok</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="measurePage">
+    <property name="styleSheet">
+     <string notr="true">background-color: white;</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
