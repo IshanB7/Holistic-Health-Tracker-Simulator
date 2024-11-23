@@ -467,7 +467,7 @@ border-radius: 20px;</string>
        <cursorShape>PointingHandCursor</cursorShape>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: orange;</string>
+       <string notr="true">color: darkorange;</string>
       </property>
       <property name="text">
        <string>Delete Profile</string>
@@ -486,7 +486,7 @@ border-radius: 20px;</string>
        <cursorShape>PointingHandCursor</cursorShape>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: orange;
+       <string notr="true">background-color: darkorange;
 color: white;
 border-radius: 15px;</string>
       </property>
@@ -520,7 +520,7 @@ border-radius: 15px;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">border-bottom: 1px solid orange;
+       <string notr="true">border-bottom: 1px solid darkorange;
 color: black;</string>
       </property>
       <property name="text">
@@ -540,7 +540,7 @@ color: black;</string>
        <cursorShape>PointingHandCursor</cursorShape>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: orange;
+       <string notr="true">background-color: darkorange;
 color: white;
 border-radius: 15px;</string>
       </property>
@@ -599,7 +599,7 @@ border-radius: 15px;</string>
        <cursorShape>PointingHandCursor</cursorShape>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: orange;</string>
+       <string notr="true">color: darkorange;</string>
       </property>
       <property name="text">
        <string>Cancel</string>
