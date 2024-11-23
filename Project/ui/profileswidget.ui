@@ -574,7 +574,7 @@ border-radius: 15px;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">border: 1px solid black;</string>
       </property>
       <property name="text">
        <string/>
