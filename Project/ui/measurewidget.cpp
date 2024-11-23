@@ -30,8 +30,6 @@ void MeasureWidget::reload() {
         ui->goButton->setVisible(false);
         ui->stackedWidget->setCurrentIndex(0);
     } else {
-        ui->okButton->setVisible(true);
-        ui->goButton->setVisible(false);
         ui->stackedWidget->setCurrentIndex(1);
     }
 }
