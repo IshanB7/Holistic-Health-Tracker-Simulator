@@ -46,10 +46,8 @@ void App::removeProfile(Profile* p) {
         }
     }
 
-    for (; i < 4; ++i) {
-        profiles[i] = profiles[i+1];
-        if (profiles[i+1] == nullptr) break;
-    }
+    for (; i < 4; ++i) { profiles[i] = profiles[i+1]; }
+    profiles[4] = nullptr;
 
     current = profiles[0];
 }
