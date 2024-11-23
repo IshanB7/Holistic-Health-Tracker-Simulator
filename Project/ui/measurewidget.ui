@@ -89,6 +89,27 @@ color: white;</string>
        <string>Ok</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="goButton">
+      <property name="geometry">
+       <rect>
+        <x>9</x>
+        <y>90</y>
+        <width>280</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: darkorange;
+border-radius: 5px;
+color: white;</string>
+      </property>
+      <property name="text">
+       <string>Go</string>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QWidget" name="measurePage">

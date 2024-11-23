@@ -18,6 +18,7 @@ public:
 
 private slots:
     void pressOk();
+    void pressGo();
 
 private:
     Ui::MeasureWidget *ui;
