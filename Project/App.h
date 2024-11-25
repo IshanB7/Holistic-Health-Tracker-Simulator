@@ -13,7 +13,7 @@ public:
     static Profile* user();
     static void setCurrentProfile(Profile*);
     static void removeProfile(Profile*);
-    static void addProfile(std::string);
+    static void addProfile(std::string, bool, short, short);
 
 private:
     // TODO: refactor so that the enumber of profiles is not hardcoded to 5

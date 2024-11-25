@@ -6,9 +6,8 @@ Profile* App::profiles[5] = {nullptr};
 Profile* App::current = nullptr;
 
 App::App() {
-    profiles[0] = new Profile("Demo");
-    profiles[1] = new Profile("Guest");
-    for (int i = 2; i < 5; ++i) profiles[i] = nullptr;
+    profiles[0] = new Profile("Demo", false, 45, 145);
+    for (int i = 1; i < 5; ++i) profiles[i] = nullptr;
     profiles[0]->addReading(Radotech::getReading());
     current = profiles[0];
 }
@@ -52,13 +51,13 @@ void App::removeProfile(Profile* p) {
     current = profiles[0];
 }
 
-void App::addProfile(std::string newProfileName) {
+void App::addProfile(std::string newProfileName, bool newIsMale, short newWeight, short newHeight) {
     unsigned int i; // Used as a counter
     // Find first available pointer in the profile array to point to the new profile
     for (i = 0; i < 5; ++i) {
         if (profiles[i] == nullptr) {
             // Found an available pointer, create a new profile object
-            profiles[i] = new Profile(newProfileName);
+            profiles[i] = new Profile(newProfileName, newIsMale, newWeight, newHeight);
             if (current == nullptr) current = profiles[i];
             return;
         }
