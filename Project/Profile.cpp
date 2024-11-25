@@ -9,7 +9,9 @@ const std::array <std::pair<int, int>, 12> Profile::range = {{
     {50, 70}, {40, 55}, {45, 65}, {45, 65}, {40, 60}, {45, 65}
 }};
 
-Profile::Profile(std::string newProfileName) {
+Profile::Profile(std::string newProfileName, bool newIsMale, short newWeight, short newHeight):
+    isMale(newIsMale), weight(newWeight), height(newHeight)
+{
     // Truncate profile name to first 32 characters
     this->name = newProfileName.substr(0, MAX_PROFILE_NAME_LENGTH - 1);
 }
@@ -56,7 +58,3 @@ void Profile::addReading(std::array<int, 24> dataPoints) {
     readingTimes.insert(readingTimes.begin(), oss.str());
     std::cout << oss.str() << std::endl;
 }
-
-const std::string& Profile::getName() const { return name; }
-
-void Profile::setName(std::string newName) { name = newName; }

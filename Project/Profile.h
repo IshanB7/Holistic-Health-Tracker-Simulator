@@ -7,19 +7,25 @@
 
 #define MAX_PROFILE_NAME_LENGTH 32 // Maximum number of characters in a profile name
 
+class ProfilesWidget;
+
 class Profile {
 
+friend class ProfilesWidget;
+
 public:
-    Profile(std::string);
+    Profile(std::string, bool, short, short);
     const std::array<std::pair<int, int>, 24>& getReading(int) const;
     void addReading(std::array<int, 24>);
-    const std::string& getName() const;
-    void setName(std::string);
 
 private:
     std::vector <std::array <std::pair<int, int>, 24>> readings;
     std::vector <std::string> readingTimes;
     std::string name;
+    bool isMale;
+    short weight;
+    short height;
+
     static const std::array<std::pair <int, int>, 12> range;
     
 };
