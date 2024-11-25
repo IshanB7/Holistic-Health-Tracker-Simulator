@@ -2,12 +2,17 @@
 #include "ui_profileswidget.h"
 #include "App.h"
 #include <QString>
+#include <QButtonGroup>
 
 ProfilesWidget::ProfilesWidget(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::ProfilesWidget)
 {
     ui->setupUi(this);
+
+    QButtonGroup* buttonGroup = new QButtonGroup(this);
+    buttonGroup->addButton(ui->maleRadioButton);
+    buttonGroup->addButton(ui->femaleRadioButton);
 
     buttons[0] = ui->newProfileButton;
     buttons[1] = ui->profile1Button;
@@ -37,6 +42,9 @@ ProfilesWidget::ProfilesWidget(QWidget *parent)
     connect(ui->cancelButton, SIGNAL (released()), this, SLOT (cancel()));
     connect(ui->backButton, SIGNAL (released()), this, SLOT (cancel()));
     connect(ui->checkBox, SIGNAL (clicked()), this, SLOT (select()));
+
+    connect(ui->weightText, SIGNAL (textChanged(QString)), this, SLOT (checkNums()));
+    connect(ui->heightText, SIGNAL (textChanged(QString)), this, SLOT (checkNums()));
 }
 
 ProfilesWidget::~ProfilesWidget()
@@ -53,7 +61,7 @@ void ProfilesWidget::reload() {
 
     int i = 1;
     for (Profile* p : users) {
-        QString name = QString::fromStdString(p->getName());
+        QString name = QString::fromStdString(p->name);
         buttons[i]->setText(name);
         buttons[i]->setVisible(true);
         currentButtons[i-1]->setVisible(p == current);
@@ -78,6 +86,9 @@ void ProfilesWidget::edit() {
     ui->checkBox->setVisible(!b);
 
     ui->nameText->setText("");
+    ui->weightText->setText("");
+    ui->heightText->setText("");
+    ui->maleRadioButton->setChecked(true);
     if (!b) {
         for (int i = 1; i < 6; ++i) {
             if (button == buttons[i]) {
@@ -85,18 +96,28 @@ void ProfilesWidget::edit() {
                 break;
             }
         }
-        QString name = QString::fromStdString(user->getName());
-        ui->nameText->setText(name);
+        QString name = QString::fromStdString(user->name);
+        QString weight = QString::number(user->weight);
+        QString height = QString::number(user->height);
 
+        ui->nameText->setText(name);
+        ui->weightText->setText(weight);
+        ui->heightText->setText(height);
+        ui->femaleRadioButton->setChecked(!user->isMale);
         ui->checkBox->setChecked(user == App::user());
     }
-
+    checkNums();
     ui->stackedWidget->setCurrentIndex(1);
 }
 
 void ProfilesWidget::save() {
     std::string newName = ui->nameText->displayText().toStdString();
-    user->setName(newName);
+    short weight = ui->weightText->displayText().toInt();
+    short height = ui->heightText->displayText().toInt();
+    user->name = newName;
+    user->weight = weight;
+    user->height = height;
+    user->isMale = ui->maleRadioButton->isChecked();
     reload();
 }
 
@@ -108,8 +129,11 @@ void ProfilesWidget::deleteProfile() {
 void ProfilesWidget::addProfile() {
     // Get the name string
     std::string newProfileName = ui->nameText->displayText().toStdString();
+    short newWeight = ui->weightText->displayText().toInt();
+    short newHeight = ui->heightText->displayText().toInt();
+    bool newIsMale = ui->maleRadioButton->isChecked();
     // Add profile to the app
-    App::addProfile(newProfileName);
+    App::addProfile(newProfileName, newIsMale, newWeight, newHeight);
     // Refresh the UI
     reload();
 }
@@ -124,4 +148,15 @@ void ProfilesWidget::select() {
     } else {
         ui->checkBox->setChecked(true);
     }
+}
+
+void ProfilesWidget::checkNums() {
+    bool isWeightNum, isHeightNum;
+    ui->weightText->displayText().toInt(&isWeightNum);
+    isWeightNum = !isWeightNum ? false : ui->weightText->displayText().toInt() > 0 && ui->weightText->displayText().toInt() < 1000;
+    ui->heightText->displayText().toInt(&isHeightNum);
+    isHeightNum = !isHeightNum ? false : ui->heightText->displayText().toInt() > 0 && ui->heightText->displayText().toInt() < 300;
+
+    ui->addButton->setEnabled(isWeightNum && isHeightNum);
+    ui->saveButton->setEnabled(isWeightNum && isHeightNum);
 }
