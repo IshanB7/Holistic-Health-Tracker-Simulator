@@ -2,6 +2,8 @@
 #define MEASUREWIDGET_H
 
 #include <QWidget>
+#include <QTimer>
+#include <QFrame>
 
 namespace Ui {
 class MeasureWidget;
@@ -19,9 +21,20 @@ public:
 private slots:
     void pressOk();
     void pressGo();
+    void pressMeasure();
+    void pressDone();
+    void refresh();
+    void showNextPoint();
 
 private:
     Ui::MeasureWidget *ui;
+    QTimer measureTimeout;
+    QTimer measureTimer;
+    void initMeasure();
+    void setPoints();
+    QFrame* points[24];
+    std::array<int, 24> reading;
+    int pointNum;
 };
 
 #endif // MEASUREWIDGET_H
