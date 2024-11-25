@@ -17,4 +17,7 @@
     <qresource prefix="">
         <file>images/current.png</file>
     </qresource>
+    <qresource prefix="">
+        <file>images/Graph.png</file>
+    </qresource>
 </RCC>
