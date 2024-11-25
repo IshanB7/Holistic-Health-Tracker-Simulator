@@ -31,6 +31,9 @@ void MeasureWidget::reload() {
         ui->stackedWidget->setCurrentIndex(0);
     } else {
         ui->stackedWidget->setCurrentIndex(1);
+        ui->bgMeasure->setVisible(false);
+        ui->measureButton->setVisible(true);
+        ui->fakeButton->setVisible(false);
     }
 }
 

@@ -116,6 +116,70 @@ color: white;</string>
     <property name="styleSheet">
      <string notr="true">background-color: white;</string>
     </property>
+    <widget class="QFrame" name="bgMeasure">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>-410</x>
+       <y>0</y>
+       <width>444</width>
+       <height>671</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(120, 120, 120);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Shape::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Shadow::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="measureButton">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>300</y>
+       <width>300</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: darkorange;
+color: white;
+border-radius: 20px;</string>
+     </property>
+     <property name="text">
+      <string>Measure Now</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="fakeButton">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>550</y>
+       <width>300</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>ArrowCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(196, 104, 4);
+color: white;
+border-radius: 20px;</string>
+     </property>
+     <property name="text">
+      <string>Measure Now</string>
+     </property>
+    </widget>
    </widget>
   </widget>
  </widget>
