@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QPushButton>
 #include <QFrame>
+#include <QlabeL>
 
 namespace Ui {
 class HistoryWidget;
@@ -29,6 +30,7 @@ private:
     Ui::HistoryWidget *ui;
     QPushButton* buttons[10];
     QFrame* points[24];
+    QLabel* labels[24];
     std::array<std::pair<int, int>, 24> reading;
     void setPoints();
 };

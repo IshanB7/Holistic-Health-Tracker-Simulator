@@ -45,6 +45,31 @@ HistoryWidget::HistoryWidget(QWidget *parent)
     points[22] = ui->point23;
     points[23] = ui->point24;
 
+    labels[0] = ui->label1;
+    labels[1] = ui->label2;
+    labels[2] = ui->label3;
+    labels[3] = ui->label4;
+    labels[4] = ui->label5;
+    labels[5] = ui->label6;
+    labels[6] = ui->label7;
+    labels[7] = ui->label8;
+    labels[8] = ui->label9;
+    labels[9] = ui->label10;
+    labels[10] = ui->label11;
+    labels[11] = ui->label12;
+    labels[12] = ui->label13;
+    labels[13] = ui->label14;
+    labels[14] = ui->label15;
+    labels[15] = ui->label16;
+    labels[16] = ui->label17;
+    labels[17] = ui->label18;
+    labels[18] = ui->label19;
+    labels[19] = ui->label20;
+    labels[20] = ui->label21;
+    labels[21] = ui->label22;
+    labels[22] = ui->label23;
+    labels[23] = ui->label24;
+
     for (int i = 0; i < 10; ++i) {
         connect(buttons[i], SIGNAL (released()), this, SLOT (showCharts()));
     }
@@ -112,6 +137,9 @@ void HistoryWidget::setPoints() {
         w = points[i]->width();
         h = 2.5 * reading[i].first;
         y = 520 - h;
+
+        QString num = QString::number(reading[i].first);
+        labels[i]->setText(num);
 
         switch (reading[i].second) {
 
