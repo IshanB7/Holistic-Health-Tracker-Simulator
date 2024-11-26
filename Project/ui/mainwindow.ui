@@ -42,7 +42,7 @@
      <string notr="true">QTabBar::tab:selected {background-color: blue; color: white;}</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <property name="tabsClosable">
      <bool>false</bool>
@@ -57,7 +57,7 @@
       <string>Profiles</string>
      </attribute>
     </widget>
-    <widget class="QWidget" name="history">
+    <widget class="HistoryWidget" name="history">
      <attribute name="title">
       <string>History</string>
      </attribute>
@@ -92,6 +92,12 @@
    <class>MeasureWidget</class>
    <extends>QWidget</extends>
    <header>measurewidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>HistoryWidget</class>
+   <extends>QWidget</extends>
+   <header>historywidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

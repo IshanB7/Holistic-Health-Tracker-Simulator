@@ -21,5 +21,5 @@ MainWindow::~MainWindow()
 void MainWindow::reloadTab(int i) {
     if (i == 0) ui->measure->reload();
     else if (i == 1) ui->profiles->reload();
-    // else if (i == 2) ui->history->reload();
+    else if (i == 2) ui->history->reload();
 }
