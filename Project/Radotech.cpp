@@ -10,6 +10,8 @@ Radotech::Radotech(RadotechWidget* rw) {widget = rw;}
 
 bool Radotech::on() { return isOn; }
 
+bool Radotech::skinOn() { return onSkin; }
+
 // generates random points for reading
 std::array<int, 24> Radotech::getReading() {
     std::srand(std::time(0));

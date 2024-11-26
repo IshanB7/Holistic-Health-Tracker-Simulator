@@ -15,6 +15,7 @@ public:
     Radotech(RadotechWidget*);
     static std::array<int, 24> getReading();
     static bool on();
+    static bool skinOn();
     static void toggleSkin();
 
 private:
