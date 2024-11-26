@@ -86,7 +86,6 @@ void MeasureWidget::refresh() {
 }
 
 void MeasureWidget::pressMeasure() {
-    ui->bgMeasure->setVisible(true);
     ui->measureFrame->setVisible(true);
     ui->measureButton->setVisible(false);
 }
@@ -96,7 +95,6 @@ void MeasureWidget::initMeasure() {
     setPoints();
     pointNum = 0;
 
-    ui->bgMeasure->setVisible(false);
     ui->measureFrame->setVisible(false);
     ui->doneButton->setVisible(false);
     ui->measureButton->setVisible(true);

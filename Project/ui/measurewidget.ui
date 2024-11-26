@@ -114,30 +114,9 @@ color: white;</string>
    </widget>
    <widget class="QWidget" name="measurePage">
     <property name="styleSheet">
-     <string notr="true">background-color: white;</string>
+     <string notr="true">border: none;
+background: qlineargradient(spread:pad, x1:0.493074, y1:0.818182, x2:0.487685, y2:0.153409, stop:0 rgba(140, 35, 13, 255), stop:0.881773 rgba(196,107,4, 255))</string>
     </property>
-    <widget class="QFrame" name="bgMeasure">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>444</width>
-       <height>671</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background: qlineargradient(spread:pad, x1:0.493074, y1:0.818182, x2:0.487685, y2:0.153409, stop:0 rgba(140, 35, 13, 255), stop:0.881773 rgba(196,107,4, 255))</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::Shape::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Shadow::Raised</enum>
-     </property>
-    </widget>
     <widget class="QPushButton" name="measureButton">
      <property name="geometry">
       <rect>
@@ -205,7 +184,9 @@ border-radius: 20px;</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: black;</string>
+       <string notr="true">color: black;
+border: none;
+background: none;</string>
       </property>
       <property name="text">
        <string>1</string>
@@ -226,7 +207,9 @@ border-radius: 20px;</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: black;</string>
+       <string notr="true">color: black;
+border: none;
+background: none;</string>
       </property>
       <property name="text">
        <string>2</string>
@@ -247,7 +230,9 @@ border-radius: 20px;</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: black;</string>
+       <string notr="true">color: black;
+border: none;
+background: none;</string>
       </property>
       <property name="text">
        <string>3</string>
@@ -268,7 +253,9 @@ border-radius: 20px;</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: black;</string>
+       <string notr="true">color: black;
+border: none;
+background: none;</string>
       </property>
       <property name="text">
        <string>4</string>
@@ -289,7 +276,9 @@ border-radius: 20px;</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: black;</string>
+       <string notr="true">color: black;
+border: none;
+background: none;</string>
       </property>
       <property name="text">
        <string>5</string>
@@ -310,7 +299,9 @@ border-radius: 20px;</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: black;</string>
+       <string notr="true">color: black;
+border: none;
+background: none;</string>
       </property>
       <property name="text">
        <string>6</string>
@@ -331,7 +322,9 @@ border-radius: 20px;</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: black;</string>
+       <string notr="true">color: black;
+border: none;
+background: none;</string>
       </property>
       <property name="text">
        <string>7</string>
@@ -352,7 +345,9 @@ border-radius: 20px;</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: black;</string>
+       <string notr="true">color: black;
+border: none;
+background: none;</string>
       </property>
       <property name="text">
        <string>8</string>
@@ -373,7 +368,9 @@ border-radius: 20px;</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: black;</string>
+       <string notr="true">color: black;
+border: none;
+background: none;</string>
       </property>
       <property name="text">
        <string>9</string>
@@ -394,7 +391,9 @@ border-radius: 20px;</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: black;</string>
+       <string notr="true">color: black;
+border: none;
+background: none;</string>
       </property>
       <property name="text">
        <string>10</string>
@@ -415,7 +414,9 @@ border-radius: 20px;</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: black;</string>
+       <string notr="true">color: black;
+border: none;
+background: none;</string>
       </property>
       <property name="text">
        <string>11</string>
@@ -436,7 +437,9 @@ border-radius: 20px;</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: black;</string>
+       <string notr="true">color: black;
+border: none;
+background: none;</string>
       </property>
       <property name="text">
        <string>12</string>
@@ -457,7 +460,9 @@ border-radius: 20px;</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: black;</string>
+       <string notr="true">color: black;
+border: none;
+background: none;</string>
       </property>
       <property name="text">
        <string>13</string>
@@ -478,7 +483,9 @@ border-radius: 20px;</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: black;</string>
+       <string notr="true">color: black;
+border: none;
+background: none;</string>
       </property>
       <property name="text">
        <string>14</string>
@@ -499,7 +506,9 @@ border-radius: 20px;</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: black;</string>
+       <string notr="true">color: black;
+border: none;
+background: none;</string>
       </property>
       <property name="text">
        <string>15</string>
@@ -520,7 +529,9 @@ border-radius: 20px;</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: black;</string>
+       <string notr="true">color: black;
+border: none;
+background: none;</string>
       </property>
       <property name="text">
        <string>16</string>
@@ -541,7 +552,9 @@ border-radius: 20px;</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: black;</string>
+       <string notr="true">color: black;
+border: none;
+background: none;</string>
       </property>
       <property name="text">
        <string>17</string>
@@ -562,7 +575,9 @@ border-radius: 20px;</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: black;</string>
+       <string notr="true">color: black;
+border: none;
+background: none;</string>
       </property>
       <property name="text">
        <string>18</string>
@@ -583,7 +598,9 @@ border-radius: 20px;</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: black;</string>
+       <string notr="true">color: black;
+border: none;
+background: none;</string>
       </property>
       <property name="text">
        <string>19</string>
@@ -604,7 +621,9 @@ border-radius: 20px;</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: black;</string>
+       <string notr="true">color: black;
+border: none;
+background: none;</string>
       </property>
       <property name="text">
        <string>20</string>
@@ -625,7 +644,9 @@ border-radius: 20px;</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: black;</string>
+       <string notr="true">color: black;
+border: none;
+background: none;</string>
       </property>
       <property name="text">
        <string>21</string>
@@ -646,7 +667,9 @@ border-radius: 20px;</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: black;</string>
+       <string notr="true">color: black;
+border: none;
+background: none;</string>
       </property>
       <property name="text">
        <string>22</string>
@@ -667,7 +690,9 @@ border-radius: 20px;</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: black;</string>
+       <string notr="true">color: black;
+border: none;
+background: none;</string>
       </property>
       <property name="text">
        <string>23</string>
@@ -688,7 +713,9 @@ border-radius: 20px;</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: black;</string>
+       <string notr="true">color: black;
+border: none;
+background: none;</string>
       </property>
       <property name="text">
        <string>24</string>
