@@ -20,6 +20,31 @@ HistoryWidget::HistoryWidget(QWidget *parent)
     buttons[8] = ui->reading9;
     buttons[9] = ui->reading10;
 
+    points[0] = ui->point1;
+    points[1] = ui->point2;
+    points[2] = ui->point3;
+    points[3] = ui->point4;
+    points[4] = ui->point5;
+    points[5] = ui->point6;
+    points[6] = ui->point7;
+    points[7] = ui->point8;
+    points[8] = ui->point9;
+    points[9] = ui->point10;
+    points[10] = ui->point11;
+    points[11] = ui->point12;
+    points[12] = ui->point13;
+    points[13] = ui->point14;
+    points[14] = ui->point15;
+    points[15] = ui->point16;
+    points[16] = ui->point17;
+    points[17] = ui->point18;
+    points[18] = ui->point19;
+    points[19] = ui->point20;
+    points[20] = ui->point21;
+    points[21] = ui->point22;
+    points[22] = ui->point23;
+    points[23] = ui->point24;
+
     for (int i = 0; i < 10; ++i) {
         connect(buttons[i], SIGNAL (released()), this, SLOT (showCharts()));
     }
@@ -28,8 +53,8 @@ HistoryWidget::HistoryWidget(QWidget *parent)
     connect(ui->circleButton, SIGNAL (released()), this, SLOT (showCircle()));
     connect(ui->backButton, SIGNAL (released()), this, SLOT (pressBack()));
 
-    ui->chartLabel->setAttribute(Qt::WA_TransparentForMouseEvents);
-    ui->circleLabel->setAttribute(Qt::WA_TransparentForMouseEvents);
+    ui->chartActive->setAttribute(Qt::WA_TransparentForMouseEvents);
+    ui->circleActive->setAttribute(Qt::WA_TransparentForMouseEvents);
 }
 
 HistoryWidget::~HistoryWidget()
@@ -54,17 +79,57 @@ void HistoryWidget::reload() {
 }
 
 void HistoryWidget::showCharts() {
+    QPushButton* button = qobject_cast<QPushButton*>(sender());
+    for (int i = 0; i < 10; ++i) {
+        if (buttons[i] == button) {
+            reading = App::user()->readings.at(i);
+            break;
+        }
+    }
+    setPoints();
     ui->stackedWidget->setCurrentIndex(1);
 }
 
 void HistoryWidget::showChart() {
-    ui->chartLabel->setVisible(true);
-    ui->circleLabel->setVisible(false);
+    ui->chartActive->setVisible(true);
+    ui->circleActive->setVisible(false);
+    ui->chartStack->setCurrentIndex(0);
 }
 
 void HistoryWidget::showCircle() {
-    ui->circleLabel->setVisible(true);
-    ui->chartLabel->setVisible(false);
+    ui->circleActive->setVisible(true);
+    ui->chartActive->setVisible(false);
+    ui->chartStack->setCurrentIndex(1);
 }
 
 void HistoryWidget::pressBack() { reload(); }
+
+void HistoryWidget::setPoints() {
+    int x, y, w, h;
+
+    for (int i = 0; i < 24; ++i) {
+        x = points[i]->x();
+        w = points[i]->width();
+        h = 2.5 * reading[i].first;
+        y = 520 - h;
+
+        switch (reading[i].second) {
+
+        case 1:
+            points[i]->setStyleSheet("background-color: rgb(70, 140, 75);");
+            break;
+        case 0:
+            points[i]->setStyleSheet("background-color: rgb(70, 100, 145);");
+            break;
+        case -1:
+            points[i]->setStyleSheet("background-color: rgb(195, 70, 70);");
+            break;
+        default:
+            break;
+
+        }
+
+        points[i]->resize(w, h);
+        points[i]->move(x, y);
+    }
+}

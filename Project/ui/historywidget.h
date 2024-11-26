@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QPushButton>
+#include <QFrame>
 
 namespace Ui {
 class HistoryWidget;
@@ -27,6 +28,9 @@ private slots:
 private:
     Ui::HistoryWidget *ui;
     QPushButton* buttons[10];
+    QFrame* points[24];
+    std::array<std::pair<int, int>, 24> reading;
+    void setPoints();
 };
 
 #endif // HISTORYWIDGET_H
