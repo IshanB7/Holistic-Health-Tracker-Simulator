@@ -56,6 +56,8 @@ MeasureWidget::~MeasureWidget()
 void MeasureWidget::reload() {
     measureTimeout.stop();
     measureTimer.stop();
+    if (Radotech::skinOn()) { Radotech::toggleSkin(); }
+
     if (App::user() == nullptr) {
         ui->errorLabel->setText("Please select a profile for metering.");
         ui->okButton->setVisible(false);
