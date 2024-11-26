@@ -116,13 +116,13 @@ void HistoryWidget::setPoints() {
         switch (reading[i].second) {
 
         case 1:
-            points[i]->setStyleSheet("background-color: rgb(70, 140, 75);");
+            points[i]->setStyleSheet("background-color: rgb(195, 70, 70);");
             break;
         case 0:
-            points[i]->setStyleSheet("background-color: rgb(70, 100, 145);");
+            points[i]->setStyleSheet("background-color: rgb(70, 140, 75);");
             break;
         case -1:
-            points[i]->setStyleSheet("background-color: rgb(195, 70, 70);");
+            points[i]->setStyleSheet("background-color: rgb(70, 100, 145);");
             break;
         default:
             break;
