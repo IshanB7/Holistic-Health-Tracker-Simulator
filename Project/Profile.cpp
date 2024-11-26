@@ -1,6 +1,5 @@
 #include "Profile.h"
 #include <chrono>
-#include <iostream>
 #include <iomanip>
 #include <sstream>
 
@@ -47,17 +46,17 @@ void Profile::addReading(std::array<int, 24> dataPoints) {
     for (int i = 12; i < 18; ++i) {
 
         reading = 0;
-        if (dataPoints[i] < range[i].first) {
+        if (dataPoints[i] < range[i-6].first) {
             reading = -1;
-        } else if (dataPoints[i] > range[i].second) {
+        } else if (dataPoints[i] > range[i-6].second) {
             reading = 1;
         }
         newAnalysis[2*i - 12] = {dataPoints[i], reading};
 
         reading = 0;
-        if (dataPoints[i+6] < range[i].first) {
+        if (dataPoints[i+6] < range[i-6].first) {
             reading = -1;
-        } else if (dataPoints[i+6] > range[i].second) {
+        } else if (dataPoints[i+6] > range[i-6].second) {
             reading = 1;
         }
         newAnalysis[2*i+1 - 12] = {dataPoints[i+6], reading};
@@ -75,5 +74,4 @@ void Profile::addReading(std::array<int, 24> dataPoints) {
     std::ostringstream oss;
     oss << std::put_time(&local_time, "%d-%m %H:%M:%S");
     readingTimes.insert(readingTimes.begin(), oss.str());
-    std::cout << oss.str() << std::endl;
 }
