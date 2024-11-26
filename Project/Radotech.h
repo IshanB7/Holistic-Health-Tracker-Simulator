@@ -12,14 +12,16 @@ class Radotech {
 friend class RadotechWidget;
 
 public:
-    Radotech();
+    Radotech(RadotechWidget*);
     static std::array<int, 24> getReading();
     static bool on();
+    static void toggleSkin();
 
 private:
     static bool isOn;
+    static bool onSkin;
     static int battery;
-
+    static RadotechWidget* widget;
 
 };
 

@@ -1,9 +1,12 @@
 #include "Radotech.h"
+#include "radotechwidget.h"
 
 bool Radotech::isOn = false;
+bool Radotech::onSkin = false;
 int Radotech::battery = 100;
+RadotechWidget* Radotech::widget = nullptr;
 
-Radotech::Radotech() {}
+Radotech::Radotech(RadotechWidget* rw) {widget = rw;}
 
 bool Radotech::on() { return isOn; }
 
@@ -37,4 +40,9 @@ std::array<int, 24> Radotech::getReading() {
     }
 
     return readings;
+}
+
+void Radotech::toggleSkin() {
+    onSkin = !onSkin;
+    widget->toggleSkin();
 }
