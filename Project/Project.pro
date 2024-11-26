@@ -18,6 +18,7 @@ SOURCES += \
     App.cpp \
     Profile.cpp \
     Radotech.cpp \
+    ui/historywidget.cpp \
     ui/main.cpp \
     ui/mainwindow.cpp \
     ui/measurewidget.cpp \
@@ -28,12 +29,14 @@ HEADERS += \
     App.h \
     Profile.h \
     Radotech.h \
+    ui/historywidget.h \
     ui/mainwindow.h \
     ui/measurewidget.h \
     ui/profileswidget.h \
     ui/radotechwidget.h
 
 FORMS += \
+    ui/historywidget.ui \
     ui/mainwindow.ui \
     ui/measurewidget.ui \
     ui/profileswidget.ui \
