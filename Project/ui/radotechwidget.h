@@ -16,6 +16,7 @@ class RadotechWidget : public QWidget
 public:
     explicit RadotechWidget(QWidget *parent = nullptr);
     ~RadotechWidget();
+    void toggleSkin();
 
 private slots:
     void decreaseBattery();

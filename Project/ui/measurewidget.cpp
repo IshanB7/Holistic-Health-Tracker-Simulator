@@ -70,7 +70,6 @@ void MeasureWidget::reload() {
         ui->stackedWidget->setCurrentIndex(1);
         initMeasure();
         measureTimeout.start();
-        measureTimer.start();
     }
 }
 
@@ -88,6 +87,8 @@ void MeasureWidget::refresh() {
 void MeasureWidget::pressMeasure() {
     ui->measureFrame->setVisible(true);
     ui->measureButton->setVisible(false);
+    measureTimer.start();
+    Radotech::toggleSkin();
 }
 
 void MeasureWidget::initMeasure() {
@@ -116,6 +117,7 @@ void MeasureWidget::showNextPoint() {
         ui->doneButton->setVisible(true);
         measureTimeout.stop();
         measureTimer.stop();
+        Radotech::toggleSkin();
     } else {
         points[pointNum++]->setVisible(true);
     }

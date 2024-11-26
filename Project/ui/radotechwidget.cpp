@@ -6,7 +6,7 @@
 RadotechWidget::RadotechWidget(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::RadotechWidget)
-    , radotech(Radotech())
+    , radotech(Radotech(this))
 {
     ui->setupUi(this);
     ui->battery->setValue(radotech.battery);
@@ -41,6 +41,7 @@ void RadotechWidget::togglePower() {
         effect->setColor(QColor(255,122,0));
     } else {
         radotech.isOn = false;
+        radotech.onSkin = false;
         effect->setColor(QColor(0,0,0));
     }
 
@@ -57,4 +58,15 @@ void RadotechWidget::drainBattery() {
 void RadotechWidget::chargeBattery() {
     radotech.battery = 100;
     ui->battery->setValue(100);
+}
+
+void RadotechWidget::toggleSkin() {
+    QGraphicsColorizeEffect* effect = new QGraphicsColorizeEffect();
+    if (radotech.onSkin) {
+        effect->setColor(QColor(0, 255, 0));
+    } else {
+        effect->setColor(QColor(255, 122, 0));
+    }
+
+    ui->power->setGraphicsEffect(effect);
 }
