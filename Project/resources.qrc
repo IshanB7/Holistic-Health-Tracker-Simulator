@@ -20,4 +20,10 @@
     <qresource prefix="">
         <file>images/Graph.png</file>
     </qresource>
+    <qresource prefix="">
+        <file>images/bar.png</file>
+    </qresource>
+    <qresource prefix="">
+        <file>images/current_chart.png</file>
+    </qresource>
 </RCC>
