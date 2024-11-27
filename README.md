@@ -2,7 +2,7 @@
 
 ## Group members
 
-> Ishan Bhalla,
+> Ishan Bhalla, <br>
 John Williams,
 Alex Gale,
 > 
