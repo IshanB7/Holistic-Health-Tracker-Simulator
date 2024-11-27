@@ -11,10 +11,10 @@
 ```
 /COMP3004-Project/
 +--- README.md 
-+--- Team13Project.pdf # Contains diagrams and written explanations
-+--- /diagrams/ # Contains diagrams as images
++--- Team13Project.pdf              # Contains diagrams and written explanations
++--- /diagrams/                     # Contains diagrams as images
 |    +--- 
-+--- /Project/ # Contains source code
++--- /Project/                      # Contains source code
 |    +--- /ui/
 ```
 
