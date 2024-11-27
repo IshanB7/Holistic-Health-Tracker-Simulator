@@ -356,7 +356,7 @@ text-align: left;</string>
       <rect>
        <x>30</x>
        <y>0</y>
-       <width>200</width>
+       <width>140</width>
        <height>50</height>
       </rect>
      </property>
@@ -366,9 +366,7 @@ text-align: left;</string>
      <property name="styleSheet">
       <string notr="true">background: none;
 color: white;
-border: 1px solid black;
-border-left: none;
-border-top: none;</string>
+border: none;</string>
      </property>
      <property name="text">
       <string>Chart</string>
@@ -377,9 +375,9 @@ border-top: none;</string>
     <widget class="QPushButton" name="circleButton">
      <property name="geometry">
       <rect>
-       <x>230</x>
+       <x>170</x>
        <y>0</y>
-       <width>200</width>
+       <width>140</width>
        <height>50</height>
       </rect>
      </property>
@@ -389,58 +387,11 @@ border-top: none;</string>
      <property name="styleSheet">
       <string notr="true">background: none;
 color: white;
-border: 1px solid black;
-border-right: none;
-border-left: none;
-border-top: none;
+border: none;
 </string>
      </property>
      <property name="text">
       <string>Circle</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="chartActive">
-     <property name="geometry">
-      <rect>
-       <x>50</x>
-       <y>5</y>
-       <width>40</width>
-       <height>40</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background: none;</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap resource="../resources.qrc">:/images/current_chart.png</pixmap>
-     </property>
-     <property name="scaledContents">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QLabel" name="circleActive">
-     <property name="geometry">
-      <rect>
-       <x>250</x>
-       <y>5</y>
-       <width>40</width>
-       <height>40</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background: none;</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap resource="../resources.qrc">:/images/current_chart.png</pixmap>
-     </property>
-     <property name="scaledContents">
-      <bool>true</bool>
      </property>
     </widget>
     <widget class="QPushButton" name="backButton">
@@ -481,6 +432,9 @@ background: none;</string>
        <width>444</width>
        <height>621</height>
       </rect>
+     </property>
+     <property name="currentIndex">
+      <number>2</number>
      </property>
      <widget class="QWidget" name="chart">
       <widget class="QLabel" name="chartLabel">
@@ -1485,6 +1439,29 @@ color: black;</string>
       </widget>
      </widget>
      <widget class="QWidget" name="circle"/>
+     <widget class="QWidget" name="body"/>
+    </widget>
+    <widget class="QPushButton" name="bodyButton">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>0</y>
+       <width>140</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: none;
+color: white;
+border: none;
+</string>
+     </property>
+     <property name="text">
+      <string>Body</string>
+     </property>
     </widget>
    </widget>
   </widget>

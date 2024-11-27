@@ -76,10 +76,8 @@ HistoryWidget::HistoryWidget(QWidget *parent)
 
     connect(ui->chartButton, SIGNAL (released()), this, SLOT (showChart()));
     connect(ui->circleButton, SIGNAL (released()), this, SLOT (showCircle()));
+    connect(ui->bodyButton, SIGNAL (released()), this, SLOT (showBody()));
     connect(ui->backButton, SIGNAL (released()), this, SLOT (pressBack()));
-
-    ui->chartActive->setAttribute(Qt::WA_TransparentForMouseEvents);
-    ui->circleActive->setAttribute(Qt::WA_TransparentForMouseEvents);
 }
 
 HistoryWidget::~HistoryWidget()
@@ -115,17 +113,11 @@ void HistoryWidget::showCharts() {
     ui->stackedWidget->setCurrentIndex(1);
 }
 
-void HistoryWidget::showChart() {
-    ui->chartActive->setVisible(true);
-    ui->circleActive->setVisible(false);
-    ui->chartStack->setCurrentIndex(0);
-}
+void HistoryWidget::showChart() { ui->chartStack->setCurrentIndex(0); }
 
-void HistoryWidget::showCircle() {
-    ui->circleActive->setVisible(true);
-    ui->chartActive->setVisible(false);
-    ui->chartStack->setCurrentIndex(1);
-}
+void HistoryWidget::showCircle() { ui->chartStack->setCurrentIndex(1); }
+
+void HistoryWidget::showBody() { ui->chartStack->setCurrentIndex(2); }
 
 void HistoryWidget::pressBack() { reload(); }
 

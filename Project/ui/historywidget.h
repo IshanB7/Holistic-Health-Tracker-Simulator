@@ -23,7 +23,7 @@ private slots:
     void showCharts();
     void showChart();
     void showCircle();
-    // void showBody();
+    void showBody();
     void pressBack();
 
 private:
