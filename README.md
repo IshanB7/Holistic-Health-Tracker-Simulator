@@ -2,9 +2,9 @@
 
 ## Group members
 
--- Ishan Bhalla,
--- John Williams,
--- Alex Gale,
+> Ishan Bhalla,
+> John Williams,
+> Alex Gale,
 
 ## Directory Structure
 
@@ -18,7 +18,7 @@
 |    +--- /ui/
 ```
 
-## Download project
+## Download and run project
 
 ```
 - git clone https://github.com/IshanB7/COMP3004-Project.git
