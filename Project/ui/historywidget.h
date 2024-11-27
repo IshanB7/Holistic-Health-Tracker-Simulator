@@ -4,7 +4,7 @@
 #include <QWidget>
 #include <QPushButton>
 #include <QFrame>
-#include <QlabeL>
+#include <QLabel>
 
 namespace Ui {
 class HistoryWidget;
