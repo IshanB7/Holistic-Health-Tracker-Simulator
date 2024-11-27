@@ -3,9 +3,8 @@
 ## Group members
 
 > Ishan Bhalla, <br>
-John Williams,
-Alex Gale,
-> 
+> John Williams, <br>
+>Alex Gale,
 
 ## Directory Structure
 
