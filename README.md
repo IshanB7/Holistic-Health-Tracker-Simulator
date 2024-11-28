@@ -11,12 +11,36 @@
 ```
 /COMP3004-Project/
 +--- README.md 
-+--- Team13Project.pdf              # Contains diagrams and written explanations
-+--- /diagrams/                     # Contains diagrams as images
++--- Team13Project.pdf              # diagrams and written explanations
++--- /diagrams/                     # diagrams as images
 |    +--- 
-+--- /Project/                      # Contains source code
-|    +--- /ui/
-|    +--- /images/
++--- /Project/                      # source code
+|    +--- App.cpp
+|    +--- App.h
+|    +--- Profile.cpp
+|    +--- Profile.h
+|    +--- Project.pro
+|    +--- Radotech.cpp
+|    +--- Radotech.h
+|    +--- resources.qrc
+|    +--- /ui/                      # .cpp, .h, and .ui for ui widgets
+|         +--- historywidget.cpp
+|         +--- historywidget.h
+|         +--- historywidget.ui
+|         +--- main.cpp
+|         +--- mainwindow.cpp
+|         +--- mainwindow.h
+|         +--- mainwindow.ui
+|         +--- measurewidget.cpp
+|         +--- measurewidget.h
+|         +--- measurewidget.ui
+|         +--- profileswidget.cpp
+|         +--- profileswidget.h
+|         +--- profileswidget.ui
+|         +--- radotechwidget.cpp
+|         +--- radotechwidget.h
+|         +--- radotechwidget.ui
+|    +--- /images/                  # images used
 |         +--- add.png
 |         +--- back.png
 |         +--- bar.png
