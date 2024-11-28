@@ -17,6 +17,14 @@
 +--- /Project/                      # Contains source code
 |    +--- /ui/
 |    +--- /images/
+|         +--- add.png
+|         +--- back.png
+|         +--- bar.png
+|         +--- current.png
+|         +--- device.png
+|         +--- edit.png
+|         +--- Graph.png
+|         +--- power.png
 ```
 
 ## Download and run project
