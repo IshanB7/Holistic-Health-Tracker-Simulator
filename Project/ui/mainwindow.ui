@@ -39,7 +39,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QTabBar::tab:selected {background-color: blue; color: white;}</string>
+     <string notr="true"/>
     </property>
     <property name="currentIndex">
      <number>3</number>
@@ -53,6 +53,9 @@
      </attribute>
     </widget>
     <widget class="ProfilesWidget" name="profiles">
+     <property name="styleSheet">
+      <string notr="true"> </string>
+     </property>
      <attribute name="title">
       <string>Profiles</string>
      </attribute>
@@ -63,6 +66,9 @@
      </attribute>
     </widget>
     <widget class="RecoWidget" name="recomen">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
      <attribute name="title">
       <string>Recommendation</string>
      </attribute>

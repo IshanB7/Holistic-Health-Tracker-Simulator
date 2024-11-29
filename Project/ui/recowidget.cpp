@@ -48,7 +48,7 @@ void RecoWidget::reload(){
     ui->lineEdit->setText(current->getAdvice());
 }
 void RecoWidget::save() {
-    App::user()->setAdvice(ui->lineEdit->text());
+    App::user()->setAdvice(ui->lineEdit->toPlainText());
     reload();
 }
 

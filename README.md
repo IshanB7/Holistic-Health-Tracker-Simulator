@@ -2,12 +2,24 @@
 
 ## Group members
 
-> Ishan Bhalla, <br>
-> Alex Gale, <br>
-> John Williams, 
+> Bhalla,Ishan: Student ID: <br>
+> Gale,Alex: Student ID: <br>
+> Williams,John: Student ID 101108045 
+
+## Download and run project
+
+```
+- git clone https://github.com/IshanB7/COMP3004-Project.git
+- sudo apt install libqt5charts5-dev # in linux terminal
+- If Project.pro.user file exists exists in /Project/ directory, delete it
+- Open Project.pro in Qt
+```
+## Instructions
+``` 
+- The app 
+```
 
 ## Directory Structure
-
 ```
 /COMP3004-Project/
 +--- README.md 
@@ -49,18 +61,6 @@
 |         +--- edit.png
 |         +--- Graph.png
 |         +--- power.png
+   
 ```
 
-## Download and run project
-
-```
-- git clone https://github.com/IshanB7/COMP3004-Project.git
-- sudo apt install libqt5charts5-dev # in linux terminal
-- If Project.pro.user file exists exists in /Project/ directory, delete it
-- Open Project.pro in Qt
-```
-
-## Instructions
-``` 
-- The app 
-```
