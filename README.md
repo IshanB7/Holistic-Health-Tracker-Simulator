@@ -3,8 +3,8 @@
 ## Group members
 
 > Ishan Bhalla, <br>
-> John Williams, <br>
->Alex Gale,
+> Alex Gale, <br>
+> John Williams, 
 
 ## Directory Structure
 
@@ -55,6 +55,7 @@
 
 ```
 - git clone https://github.com/IshanB7/COMP3004-Project.git
+- sudo apt install libqt5charts5-dev # in linux terminal
 - If Project.pro.user file exists exists in /Project/ directory, delete it
 - Open Project.pro in Qt
 ```

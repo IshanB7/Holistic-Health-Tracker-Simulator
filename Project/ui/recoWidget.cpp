@@ -21,7 +21,6 @@ RecoWidget::~RecoWidget()
 }
 
 void RecoWidget::reload(){
-    qDebug("Testing");
     Profile *current=App::user();
     int i=0;
     int readAt=current->readings.size();
@@ -47,7 +46,6 @@ void RecoWidget::reload(){
 
     ui->appRecomend->setPlainText(appropriateAdvice);
     ui->lineEdit->setText(current->getAdvice());
-    qDebug()<<"delete me";
 }
 void RecoWidget::save() {
     App::user()->setAdvice(ui->lineEdit->text());
