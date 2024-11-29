@@ -4,6 +4,7 @@
 #include <array>
 #include <cstdlib>
 #include <ctime>
+#include <string>
 
 class RadotechWidget;
 
