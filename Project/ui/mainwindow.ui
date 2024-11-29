@@ -62,7 +62,7 @@
       <string>History</string>
      </attribute>
     </widget>
-    <widget class="recoWidget" name="recomen">
+    <widget class="RecoWidget" name="recomen">
      <attribute name="title">
       <string>Recommendation</string>
      </attribute>
@@ -106,7 +106,7 @@
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>recoWidget</class>
+   <class>RecoWidget</class>
    <extends>QWidget</extends>
    <header>recowidget.h</header>
    <container>1</container>
