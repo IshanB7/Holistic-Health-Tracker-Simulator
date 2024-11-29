@@ -16,18 +16,23 @@ class RadotechWidget : public QWidget
 public:
     explicit RadotechWidget(QWidget *parent = nullptr);
     ~RadotechWidget();
-    void toggleSkin();
+    void setPointLabel(std::string);
+
 
 private slots:
     void decreaseBattery();
     void togglePower();
     void drainBattery();
     void chargeBattery();
+    void readPoint();
+    void simulate();
 
 private:
     Ui::RadotechWidget *ui;
     Radotech radotech;
     QTimer batteryDrainTimer; // Timer for draining the battery
+    void setColor();
+
 };
 
 #endif // RADOTECHWIDGET_H

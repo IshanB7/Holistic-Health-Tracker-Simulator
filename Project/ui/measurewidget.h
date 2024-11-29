@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QTimer>
 #include <QFrame>
+#include <QString>
 
 namespace Ui {
 class MeasureWidget;
@@ -33,8 +34,11 @@ private:
     void initMeasure();
     void setPoints();
     QFrame* points[24];
+    std::string pointNames[12];
+    std::string pointSides[2];
     std::array<int, 24> reading;
     int pointNum;
+    void sendNextPoint();
 };
 
 #endif // MEASUREWIDGET_H

@@ -4,9 +4,10 @@
 bool Radotech::isOn = false;
 bool Radotech::onSkin = false;
 int Radotech::battery = 100;
+bool Radotech::simulate = false;
 RadotechWidget* Radotech::widget = nullptr;
 
-Radotech::Radotech(RadotechWidget* rw) {widget = rw;}
+Radotech::Radotech(RadotechWidget* rw) { widget = rw; }
 
 bool Radotech::on() { return isOn; }
 
@@ -44,7 +45,10 @@ std::array<int, 24> Radotech::getReading() {
     return readings;
 }
 
-void Radotech::toggleSkin() {
-    onSkin = !onSkin;
-    widget->toggleSkin();
+void Radotech::showPoint(std::string pointName) {
+    widget->setPointLabel(pointName);
 }
+
+bool Radotech::simulating() { return simulate; }
+
+void Radotech::skinOff() { onSkin = false; }
