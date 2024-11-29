@@ -39,7 +39,7 @@ MeasureWidget::MeasureWidget(QWidget *parent)
     points[23] = ui->point24;
 
     measureTimeout.setInterval(100);
-    measureTimer.setInterval(500);
+    measureTimer.setInterval(250);
     connect(&measureTimeout, SIGNAL (timeout()), this, SLOT (refresh()));
     connect(&measureTimer, SIGNAL (timeout()), this, SLOT (showNextPoint()));
     connect(ui->okButton, SIGNAL (released()), this, SLOT (pressOk()));

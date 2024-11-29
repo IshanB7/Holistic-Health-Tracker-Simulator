@@ -75,3 +75,11 @@ void Profile::addReading(std::array<int, 24> dataPoints) {
     oss << std::put_time(&local_time, "%d-%m %H:%M:%S");
     readingTimes.insert(readingTimes.begin(), oss.str());
 }
+
+QString Profile::getAdvice(){
+    return adivce;
+}
+void Profile::setAdvice(QString advice){
+    this->adivce=advice;
+
+}

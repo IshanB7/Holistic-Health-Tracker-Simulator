@@ -113,9 +113,79 @@ void HistoryWidget::showCharts() {
     ui->stackedWidget->setCurrentIndex(1);
 }
 
+
 void HistoryWidget::showChart() { ui->chartStack->setCurrentIndex(0); }
 
-void HistoryWidget::showCircle() { ui->chartStack->setCurrentIndex(1); }
+void HistoryWidget::showCircle() {
+
+
+    QPixmap image(":images/circleGraph.png");
+    ui->imgCircleImg->setScaledContents(true);
+
+    QPainterPath groupPath;
+
+    QPainter Painter(&image);
+    Painter.setRenderHint(QPainter::Antialiasing);
+
+    QPen linepen(Qt::red);
+    linepen.setCapStyle(Qt::RoundCap);
+    linepen.setWidth(10);
+    Painter.setPen(linepen);
+
+    int t=(App::user()->readings.size());
+
+    if(t>0){
+
+        setPointsPainter(&groupPath,t-1,0);
+        Painter.fillPath(groupPath, QColor(0,255,0,60));
+        //ui->imgCircleImg->setPixmap(image);
+
+        setPointsPainter(&groupPath,t-1,1);
+        Painter.fillPath(groupPath, QColor(255,0,0,120));
+
+    }
+
+
+    ui->imgCircleImg->setPixmap(image);
+    ui->chartStack->setCurrentIndex(1);
+
+}
+
+void HistoryWidget::setPointsPainter(QPainterPath *g, int at,int evenOrOdd){
+    double allAngles[12]={M_PI/2,(2*M_PI)/3,(5*M_PI )/6,M_PI,(7*M_PI)/6,(4*M_PI)/3,(3*M_PI)/2,(5*M_PI)/3,(11*M_PI)/6,(2*M_PI),(M_PI)/6,(M_PI)/3};
+
+    std::array<std::pair<int, int>, 24> a;
+    int i=0;
+    int qx;
+    int qy;
+    int minimumX;
+    int minimumY;
+    int px=0;
+    int py=0;
+    a=(App::user()->getReading(at));
+    while(i<12){
+        px=((1.5*(a.at(2*(i)+evenOrOdd).first)));
+        py=(0);
+        qx=cos(allAngles[i])*px-sin(allAngles[i])*(py);
+        qy=sin(allAngles[i])*px+cos(allAngles[i])*(py);
+        minimumX=cos(allAngles[i])*82-sin(allAngles[i])*(0);
+        minimumY=sin(allAngles[i])*82+cos(allAngles[i])*(0);
+
+        if(abs(minimumX)>abs(qx) || abs(minimumY)>abs(qy)){
+            qx=minimumX;
+            qy=minimumY;
+        }
+        if(i==0){
+            g->moveTo(qx+400,qy+400);
+        }
+        //qDebug()<<qx<<qy;
+        g->lineTo(qx+400,qy+400);
+
+        i++;
+    }
+    g->closeSubpath();
+
+}
 
 void HistoryWidget::showBody() { ui->chartStack->setCurrentIndex(2); }
 

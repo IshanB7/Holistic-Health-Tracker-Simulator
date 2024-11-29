@@ -23,4 +23,7 @@
     <qresource prefix="">
         <file>images/bar.png</file>
     </qresource>
+    <qresource prefix="">
+        <file>images/circleGraph.png</file>
+    </qresource>
 </RCC>

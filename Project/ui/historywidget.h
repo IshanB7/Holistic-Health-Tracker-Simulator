@@ -5,7 +5,11 @@
 #include <QPushButton>
 #include <QFrame>
 #include <QLabel>
-
+#include <math.h>
+#include <QPainterPath>
+#include <QPainter>
+#include <QVector2D>
+#include <QDebug>
 namespace Ui {
 class HistoryWidget;
 }
@@ -25,7 +29,7 @@ private slots:
     void showCircle();
     void showBody();
     void pressBack();
-
+    void setPointsPainter(QPainterPath*,int,int);
 private:
     Ui::HistoryWidget *ui;
     QPushButton* buttons[10];
