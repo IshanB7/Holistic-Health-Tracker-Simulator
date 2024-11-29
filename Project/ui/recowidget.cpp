@@ -1,5 +1,5 @@
-#include "RecoWidget.h"
-#include "ui_recoWidget.h"
+#include "recowidget.h"
+#include "ui_recowidget.h"
 #include "App.h"
 #include <QString>
 #include <QButtonGroup>
