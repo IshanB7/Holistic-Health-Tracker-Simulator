@@ -24,7 +24,7 @@ SOURCES += \
     ui/measurewidget.cpp \
     ui/profileswidget.cpp \
     ui/radotechwidget.cpp \
-    ui/recoWidget.cpp
+    ui/recowidget.cpp
 
 HEADERS += \
     App.h \
@@ -35,7 +35,7 @@ HEADERS += \
     ui/measurewidget.h \
     ui/profileswidget.h \
     ui/radotechwidget.h \
-    ui/recoWidget.h
+    ui/recowidget.h
 
 FORMS += \
     ui/historywidget.ui \
@@ -43,7 +43,7 @@ FORMS += \
     ui/measurewidget.ui \
     ui/profileswidget.ui \
     ui/radotechwidget.ui \
-    ui/recoWidget.ui
+    ui/recowidget.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
