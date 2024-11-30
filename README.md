@@ -2,9 +2,9 @@
 
 ## Group members
 
-> Bhalla,Ishan: Student ID: <br>
-> Gale,Alex: Student ID: <br>
-> Williams,John: Student ID 101108045 
+> Ishan Bhalla : 101256630 <br>
+> Alex Gale :  <br>
+> John Williams : 101108045 
 
 ## Download and run project
 
