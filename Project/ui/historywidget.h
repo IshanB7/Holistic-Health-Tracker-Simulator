@@ -32,7 +32,7 @@ private:
     QFrame* points[24];
     QLabel* labels[24];
     std::array<std::pair<int, int>, 24> reading;
-    void setPoints();
+    void setPoints();   
 };
 
 #endif // HISTORYWIDGET_H
