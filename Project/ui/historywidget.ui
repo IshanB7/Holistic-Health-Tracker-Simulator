@@ -26,7 +26,7 @@
     <string notr="true">background: qlineargradient(spread:pad, x1:0.493074, y1:0.818182, x2:0.487685, y2:0.153409, stop:0 rgba(240, 77, 21, 255), stop:0.881773 rgba(244, 131, 0, 255))</string>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="history">
     <widget class="QPushButton" name="reading1">

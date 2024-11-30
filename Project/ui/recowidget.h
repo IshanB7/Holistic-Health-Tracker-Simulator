@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QPushButton>
 
+
 namespace Ui {
 class RecoWidget;
 }
@@ -11,7 +12,7 @@ class RecoWidget;
 class RecoWidget : public QWidget
 {
     Q_OBJECT
-
+//Its basic -no Comment JW
 public:
     explicit RecoWidget(QWidget *parent = nullptr);
     ~RecoWidget();

@@ -9,7 +9,9 @@ MeasureWidget::MeasureWidget(QWidget *parent)
     , ui(new Ui::MeasureWidget)
 {
     ui->setupUi(this);
-
+    /*
+    points[] array is used to display over the graph image.
+    */
     points[0] = ui->point1;
     points[1] = ui->point2;
     points[2] = ui->point3;
@@ -37,11 +39,18 @@ MeasureWidget::MeasureWidget(QWidget *parent)
     points[21] = ui->point22;
     points[22] = ui->point23;
     points[23] = ui->point24;
+    /*
+        Measure to set the time and speed the points are displayed
+
+    */
 
     measureTimeout.setInterval(100);
     measureTimer.setInterval(250);
     connect(&measureTimeout, SIGNAL (timeout()), this, SLOT (refresh()));
     connect(&measureTimer, SIGNAL (timeout()), this, SLOT (showNextPoint()));
+    /*
+        Buttons for the pop up and the measure widget class
+    */
     connect(ui->okButton, SIGNAL (released()), this, SLOT (pressOk()));
     connect(ui->goButton, SIGNAL (released()), this, SLOT (pressGo()));
     connect(ui->measureButton, SIGNAL (released()), this, SLOT (pressMeasure()));
@@ -52,6 +61,14 @@ MeasureWidget::~MeasureWidget()
 {
     delete ui;
 }
+
+/*
+    reload is the default behaviour of the measure class 3 cases
+    1) App::User()==nullPtr, pop up for when there is no user in app prevents reading
+    2) !Radotech::on(), pop up and prevents reading when device is off
+    3) Default behaviour, go to the measure ui page.
+
+*/
 
 void MeasureWidget::reload() {
     measureTimeout.stop();
@@ -74,18 +91,24 @@ void MeasureWidget::reload() {
         measureTimeout.start();
     }
 }
-
+//Check if the conditions are meant, if yees then go to case 3)
 void MeasureWidget::pressOk() { reload(); }
-
-void MeasureWidget::pressGo() {
-    QTabWidget* tabWidget = qobject_cast<QTabWidget*>(parentWidget()->parentWidget());
-    tabWidget->setCurrentIndex(1);
-}
-
 void MeasureWidget::refresh() {
     if (!Radotech::on()) reload();
 }
 
+//IDK what this does,
+void MeasureWidget::pressGo() {
+    QTabWidget* tabWidget = qobject_cast<QTabWidget*>(parentWidget()->parentWidget());
+    tabWidget->setCurrentIndex(1);
+}
+/*
+    Meaurement is selected, we start the sequence of events
+    initMeasure() generates new points
+    setPoints, puts all the points on the graph
+    showNext(), slowly reveils the points in the increment
+
+*/
 void MeasureWidget::pressMeasure() {
     ui->measureFrame->setVisible(true);
     ui->measureButton->setVisible(false);
@@ -124,6 +147,7 @@ void MeasureWidget::showNextPoint() {
         points[pointNum++]->setVisible(true);
     }
 }
+//Allows you to restart this whole sequence of events.
 
 void MeasureWidget::pressDone() {
     QTabWidget* tabWidget = qobject_cast<QTabWidget*>(parentWidget()->parentWidget());

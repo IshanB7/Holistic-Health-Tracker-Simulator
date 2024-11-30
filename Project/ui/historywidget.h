@@ -29,7 +29,8 @@ private slots:
     void showCircle();
     void showBody();
     void pressBack();
-    void setPointsPainter(QPainterPath*,int,int);
+    void setPointsPainter(QPainterPath*,int);
+    void setReading();
 private:
     Ui::HistoryWidget *ui;
     QPushButton* buttons[10];

@@ -23,7 +23,13 @@ RadotechWidget::~RadotechWidget()
 {
     delete ui;
 }
-
+/*
+    decreaseBattery: update the battery value
+    togglePower: turns  the wdiget on and changes the colour to reflect it
+    drainBattery: slowly decrease the battery pertenceage when it is one
+    chargeBattery: set charge to 100%
+    toggelSkin: if widget is touching the skin
+*/
 void RadotechWidget::decreaseBattery() {
     if (radotech.isOn && radotech.battery > 0) {
         radotech.battery -= 1;

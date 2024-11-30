@@ -20,20 +20,33 @@ RecoWidget::~RecoWidget()
     delete ui;
 }
 
+/*
+    Default behaviour:
+    Three Cases
+    1) no user in the system or current
+    2) no reading to give recommendation too
+    3) if 1) and 2) are not true, geneerate the advice
+        3.a) if ==-1 it is a "bad" reading on EITHER, left or rightW
+*/
 void RecoWidget::reload(){
-    Profile *current=App::user();
-    int i=0;
-    int readAt=current->readings.size();
+
     QString appropriateAdvice;
+    if (App::user() == nullptr){
+        appropriateAdvice="Add a User...";
+        ui->appRecomend->setPlainText(appropriateAdvice);
+        return;
+
+    }
+    int i=0;
+    int readAt=0;
     QChar bulletChar(0x2022);
-    //QStringLiteral newLine("  A\n");
-    if(readAt==0){
+    Profile *current=App::user();
+    if(App::user()->readings.size()==0){
         appropriateAdvice="Add a reading to receive Advice";
-        //add please add a reading
     }
 
     else{
-
+        readAt=current->readings.size();
         while(i<12){
             if (((current->getReading(readAt-1).at(2*(i)).second)==-1)||((current->getReading(readAt-1).at(2*(i)+1).second)==-1)){
                 appropriateAdvice+=bulletChar;
@@ -47,16 +60,17 @@ void RecoWidget::reload(){
     ui->appRecomend->setPlainText(appropriateAdvice);
     ui->lineEdit->setText(current->getAdvice());
 }
+//Save advice in the textfield to a Profile QString
 void RecoWidget::save() {
     App::user()->setAdvice(ui->lineEdit->toPlainText());
     reload();
 }
-
+//just clear it
 void RecoWidget::cancel(){
     ui->lineEdit->clear();
 }
 
-
+//all advice, hard coded no LLM, although that be cool.
 QString RecoWidget::allAdvice(int i){
     switch (i){
         case 0:

@@ -32,8 +32,8 @@ private:
     Ui::ProfilesWidget *ui;
     QPushButton* buttons[6];
     QPushButton* currentButtons[5];
-    std::vector<Profile*> users;
-    Profile* user;
+    std::vector<Profile*> users; //for the users
+    Profile* user; //for the current user
 };
 
 #endif // PROFILESWIDGET_H

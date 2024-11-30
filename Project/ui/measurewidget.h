@@ -28,12 +28,12 @@ private slots:
 
 private:
     Ui::MeasureWidget *ui;
-    QTimer measureTimeout;
+    QTimer measureTimeout; //allows to set in constructor
     QTimer measureTimer;
     void initMeasure();
     void setPoints();
     QFrame* points[24];
-    std::array<int, 24> reading;
+    std::array<int, 24> reading; //record from getReading and display on graph
     int pointNum;
 };
 

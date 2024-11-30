@@ -17,7 +17,7 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
-
+//change the tab to the appropriate page
 void MainWindow::reloadTab(int i) {
     ui->measure->reload();
     if (i == 1) ui->profiles->reload();
