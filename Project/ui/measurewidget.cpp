@@ -44,8 +44,24 @@ MeasureWidget::MeasureWidget(QWidget *parent)
 
     */
 
+    pointNames[0] = "H1 (Lungs), ";
+    pointNames[1] = "H2 (Pericardium), ";
+    pointNames[2] = "H3 (Heart), ";
+    pointNames[3] = "H4 (Small intestine), ";
+    pointNames[4] = "H5 (Lymph vessel), ";
+    pointNames[5] = "H6 (Large intestine), ";
+    pointNames[6] = "F1 (Pancreas), ";
+    pointNames[7] = "F2 (Liver), ";
+    pointNames[8] = "F3 (Kidneys), ";
+    pointNames[9] = "F4 (Bladder), ";
+    pointNames[10] = "F5 (Gall bladder), ";
+    pointNames[11] = "F6 (Stomach), ";
+
+    pointSides[0] = "L";
+    pointSides[1] = "R";
+
     measureTimeout.setInterval(100);
-    measureTimer.setInterval(250);
+    measureTimer.setInterval(100);
     connect(&measureTimeout, SIGNAL (timeout()), this, SLOT (refresh()));
     connect(&measureTimer, SIGNAL (timeout()), this, SLOT (showNextPoint()));
     /*
@@ -73,7 +89,7 @@ MeasureWidget::~MeasureWidget()
 void MeasureWidget::reload() {
     measureTimeout.stop();
     measureTimer.stop();
-    if (Radotech::skinOn()) { Radotech::toggleSkin(); }
+    if (Radotech::skinOn()) Radotech::skinOff();
 
     if (App::user() == nullptr) {
         ui->errorLabel->setText("Please select a profile for metering.");
@@ -113,7 +129,6 @@ void MeasureWidget::pressMeasure() {
     ui->measureFrame->setVisible(true);
     ui->measureButton->setVisible(false);
     measureTimer.start();
-    Radotech::toggleSkin();
 }
 
 void MeasureWidget::initMeasure() {
@@ -137,17 +152,30 @@ void MeasureWidget::setPoints() {
 }
 
 void MeasureWidget::showNextPoint() {
+    Radotech::showPoint("");
     if (pointNum == 24) {
         App::user()->addReading(reading);
         ui->doneButton->setVisible(true);
         measureTimeout.stop();
         measureTimer.stop();
-        Radotech::toggleSkin();
-    } else {
+    } else if (Radotech::simulating()){
         points[pointNum++]->setVisible(true);
+    } else if (Radotech::skinOn()) {
+        points[pointNum++]->setVisible(true);
+        Radotech::skinOff();
+        sendNextPoint();
+    } else if (!Radotech::skinOn()) {
+        sendNextPoint();
     }
 }
 //Allows you to restart this whole sequence of events.
+
+void MeasureWidget::sendNextPoint() {
+    int inc = pointNum > 11 ? 6 : 0;
+    int nameIdx = (pointNum % 6) + inc;
+    int sideIdx = (pointNum % 12) > 5 ? 1 : 0;
+    Radotech::showPoint(pointNames[nameIdx] + pointSides[sideIdx]);
+}
 
 void MeasureWidget::pressDone() {
     QTabWidget* tabWidget = qobject_cast<QTabWidget*>(parentWidget()->parentWidget());

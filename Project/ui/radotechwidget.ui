@@ -178,6 +178,73 @@ padding-top: 50px;</string>
      <string>charge</string>
     </property>
    </widget>
+   <widget class="QLabel" name="readingLabel">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>45</y>
+      <width>120</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: none;</string>
+    </property>
+    <property name="text">
+     <string>Now measuring:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="simulateLabel">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>120</y>
+      <width>120</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: none;</string>
+    </property>
+    <property name="text">
+     <string>Simulate readings</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pointButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>40</y>
+      <width>170</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="simulateButton">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>125</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: none;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources>

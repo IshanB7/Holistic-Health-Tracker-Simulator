@@ -26,4 +26,7 @@
     <qresource prefix="">
         <file>images/circleGraph.png</file>
     </qresource>
+    <qresource prefix="">
+        <file>images/organs.png</file>
+    </qresource>
 </RCC>
