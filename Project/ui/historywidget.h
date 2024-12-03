@@ -33,6 +33,12 @@ private:
     QLabel* labels[24];
     std::array<std::pair<int, int>, 24> reading;
     void setPoints();
+    // Changes the color of the black PNG icons of the lungs,
+    // heart, etc. on the body chart according to the readings
+    void recolorPushButtonIcon(QPushButton *button, std::pair<int, int> reading);
+    // Note:
+    // The body chart body parts were implemented using buttons so that
+    // they can easily be made clickable
 };
 
 #endif // HISTORYWIDGET_H

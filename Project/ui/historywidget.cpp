@@ -2,6 +2,8 @@
 #include "ui_historywidget.h"
 #include "App.h"
 #include <QString>
+#include <QBitmap>
+#include <QGraphicsDropShadowEffect>
 
 HistoryWidget::HistoryWidget(QWidget *parent)
     : QWidget(parent)
@@ -152,4 +154,66 @@ void HistoryWidget::setPoints() {
         points[i]->resize(w, h);
         points[i]->move(x, y);
     }
+
+    // Set colors of all body chart images based on readings
+    recolorPushButtonIcon(ui->leftlung, reading[0]);
+    recolorPushButtonIcon(ui->rightlung, reading[1]);
+    // Important note:
+    // Technically the left heart icon is actually the pericardium (sac
+    // of liquid around the heart) so I'm using the pericardium reading
+    // to color the left side of the heart and the heart reading to color
+    // the right side of the heart
+    recolorPushButtonIcon(ui->leftheart, reading[2]); // Pericardium reading
+    recolorPushButtonIcon(ui->rightheart, reading[4]); // Heart reading
+    recolorPushButtonIcon(ui->leftsmallintestine, reading[6]);
+    recolorPushButtonIcon(ui->rightsmallintestine, reading[7]);
+    recolorPushButtonIcon(ui->leftlymphvessel, reading[8]);
+    recolorPushButtonIcon(ui->rightlymphvessel, reading[9]);
+    recolorPushButtonIcon(ui->leftlargeintestine, reading[10]);
+    recolorPushButtonIcon(ui->rightlargeintestine, reading[11]);
+    recolorPushButtonIcon(ui->leftpancreas, reading[12]);
+    recolorPushButtonIcon(ui->rightpancreas, reading[13]);
+    recolorPushButtonIcon(ui->leftliver, reading[14]);
+    recolorPushButtonIcon(ui->rightliver, reading[15]);
+    recolorPushButtonIcon(ui->leftkidney, reading[16]);
+    recolorPushButtonIcon(ui->rightkidney, reading[17]);
+    recolorPushButtonIcon(ui->leftbladder, reading[18]);
+    recolorPushButtonIcon(ui->rightbladder, reading[19]);
+    recolorPushButtonIcon(ui->leftgallbladder, reading[20]);
+    recolorPushButtonIcon(ui->rightgallbladder, reading[21]);
+    recolorPushButtonIcon(ui->leftstomach, reading[22]);
+    recolorPushButtonIcon(ui->rightstomach, reading[23]);
+}
+
+void HistoryWidget::recolorPushButtonIcon(QPushButton *button, std::pair<int, int> reading) {
+    // The recoloring doesn't work when this is allocated on the stack.
+    // There is a small chance that this may cause a memory leak, but this
+    // will probably get deleted by the QPushButton that this gets passed to
+    QGraphicsColorizeEffect *ce = new QGraphicsColorizeEffect;
+    // Choose color based on reading
+    switch (reading.second) {
+        case 1:
+            ce->setColor(QColor(195, 70, 70));
+            break;
+        case 0:
+            ce->setColor(QColor(70, 140, 75));
+            break;
+        case -1:
+            ce->setColor(QColor(70, 100, 145));
+            break;
+        default:
+            ce->setColor(QColor(0, 0, 0));
+            break;
+    }
+    ce->setStrength(1);
+    // Apply the color effect to the button
+    button->setGraphicsEffect(ce);
+
+//    // Draw a blurred shadow underneath each organ for better contrast
+//    QGraphicsDropShadowEffect *effect = new QGraphicsDropShadowEffect;
+//    effect->setBlurRadius(10);
+//    effect->setXOffset(0);
+//    effect->setYOffset(0);
+//    effect->setColor(Qt::black);
+//    button->setGraphicsEffect(effect);
 }

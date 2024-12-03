@@ -23,4 +23,73 @@
     <qresource prefix="">
         <file>images/bar.png</file>
     </qresource>
+    <qresource prefix="">
+        <file>images/bodychartimages/bodyoutline.jpg</file>
+    </qresource>
+    <qresource prefix="">
+        <file>images/bodychartimages/leftlung.png</file>
+    </qresource>
+    <qresource prefix="">
+        <file>images/bodychartimages/rightlung.png</file>
+    </qresource>
+    <qresource prefix="">
+        <file>images/bodychartimages/leftheart.png</file>
+    </qresource>
+    <qresource prefix="">
+        <file>images/bodychartimages/rightheart.png</file>
+    </qresource>
+    <qresource prefix="">
+        <file>images/bodychartimages/leftsmallintestine.png</file>
+    </qresource>
+    <qresource prefix="">
+        <file>images/bodychartimages/rightsmallintestine.png</file>
+    </qresource>
+    <qresource prefix="">
+        <file>images/bodychartimages/leftlymphvessel.png</file>
+    </qresource>
+    <qresource prefix="">
+        <file>images/bodychartimages/rightlymphvessel.png</file>
+    </qresource>
+    <qresource prefix="">
+        <file>images/bodychartimages/leftlargeintestine.png</file>
+    </qresource>
+    <qresource prefix="">
+        <file>images/bodychartimages/rightlargeintestine.png</file>
+    </qresource>
+    <qresource prefix="">
+        <file>images/bodychartimages/leftpancreas.png</file>
+    </qresource>
+    <qresource prefix="">
+        <file>images/bodychartimages/rightpancreas.png</file>
+    </qresource>
+    <qresource prefix="">
+        <file>images/bodychartimages/leftliver.png</file>
+    </qresource>
+    <qresource prefix="">
+        <file>images/bodychartimages/rightliver.png</file>
+    </qresource>
+    <qresource prefix="">
+        <file>images/bodychartimages/leftkidney.png</file>
+    </qresource>
+    <qresource prefix="">
+        <file>images/bodychartimages/rightkidney.png</file>
+    </qresource>
+    <qresource prefix="">
+        <file>images/bodychartimages/leftbladder.png</file>
+    </qresource>
+    <qresource prefix="">
+        <file>images/bodychartimages/rightbladder.png</file>
+    </qresource>
+    <qresource prefix="">
+        <file>images/bodychartimages/leftgallbladder.png</file>
+    </qresource>
+    <qresource prefix="">
+        <file>images/bodychartimages/rightgallbladder.png</file>
+    </qresource>
+    <qresource prefix="">
+        <file>images/bodychartimages/leftstomach.png</file>
+    </qresource>
+    <qresource prefix="">
+        <file>images/bodychartimages/rightstomach.png</file>
+    </qresource>
 </RCC>
