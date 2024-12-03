@@ -58,7 +58,7 @@
 |         +--- back.png
 |         +--- bar.png
 |         +--- current.png
-|	      +--- circleGraph.png
+|	   +--- circleGraph.png
 |         +--- device.png
 |         +--- edit.png
 |         +--- Graph.png
