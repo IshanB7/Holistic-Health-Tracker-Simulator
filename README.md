@@ -24,8 +24,10 @@
 +--- README.md 
 +--- Team13Project.pdf              # diagrams and written explanations
 +--- /diagrams/                     # diagrams as images
-|    +--- 
+|    +--- seq1.png
+|    +--- seq2.png
 +--- /Project/                      # source code
+|    +--- .gitignore
 |    +--- App.cpp
 |    +--- App.h
 |    +--- Profile.cpp
@@ -56,34 +58,35 @@
 |         +--- back.png
 |         +--- bar.png
 |         +--- current.png
-|	  +--- circleGraph.png
+|	      +--- circleGraph.png
 |         +--- device.png
 |         +--- edit.png
 |         +--- Graph.png
+|         +--- organs.png
 |         +--- power.png
-|	  +--- /bodychartimages/
-|	       +--- bodyoutline.jpg         
-|	       +--- leftlymphvessel.png     
-|	       +--- rightlargeintestine.png
-|	       +--- leftbladder.png         
-|	       +--- leftpancreas.png        
-|	       +--- rightliver.png
-|	       +--- leftgallbladder.png     
-|	       +--- leftsmallintestine.png  
-|	       +--- rightlung.png
-|	       +--- leftheart.png           
-|	       +--- leftstomach.png         
-|	       +--- rightlymphvessel.png
-|	       +--- leftkidney.png          
-|	       +--- rightbladder.png        
-|	       +--- rightpancreas.png
-|	       +--- leftlargeintestine.png  
-|	       +--- rightgallbladder.png    
-|	       +--- rightsmallintestine.png
-|	       +--- leftliver.png           
-|	       +--- rightheart.png          
-|	       +--- rightstomach.png
-|	       +--- leftlung.png            
-|	       +--- rightkidney.png
+|	      +--- /bodychartimages/
+|	           +--- bodyoutline.jpg         
+|	           +--- leftlymphvessel.png     
+|	           +--- rightlargeintestine.png
+|	           +--- leftbladder.png         
+|	           +--- leftpancreas.png        
+|	           +--- rightliver.png
+|	           +--- leftgallbladder.png     
+|	           +--- leftsmallintestine.png  
+|	           +--- rightlung.png
+|	           +--- leftheart.png           
+|	           +--- leftstomach.png         
+|	           +--- rightlymphvessel.png
+|	           +--- leftkidney.png          
+|	           +--- rightbladder.png        
+|	           +--- rightpancreas.png
+|	           +--- leftlargeintestine.png  
+|	           +--- rightgallbladder.png    
+|	           +--- rightsmallintestine.png
+|	           +--- leftliver.png           
+|	           +--- rightheart.png          
+|	           +--- rightstomach.png
+|	           +--- leftlung.png            
+|	           +--- rightkidney.png
 ```
 
