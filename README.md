@@ -58,13 +58,13 @@
 |         +--- back.png
 |         +--- bar.png
 |         +--- current.png
-|	   +--- circleGraph.png
+|	  +--- circleGraph.png
 |         +--- device.png
 |         +--- edit.png
 |         +--- Graph.png
 |         +--- organs.png
 |         +--- power.png
-|	      +--- /bodychartimages/
+|	  +--- /bodychartimages/
 |	           +--- bodyoutline.jpg         
 |	           +--- leftlymphvessel.png     
 |	           +--- rightlargeintestine.png
