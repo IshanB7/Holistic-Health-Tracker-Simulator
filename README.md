@@ -3,7 +3,7 @@
 ## Group members
 
 > Ishan Bhalla : 101256630 <br>
-> Alex Gale :  <br>
+> Alex Gale :  101273250<br>
 > John Williams : 101108045 
 
 ## Download and run project
