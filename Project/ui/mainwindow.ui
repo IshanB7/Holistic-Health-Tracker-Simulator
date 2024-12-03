@@ -39,10 +39,10 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QTabBar::tab:selected {background-color: blue; color: white;}</string>
+     <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>3</number>
     </property>
     <property name="tabsClosable">
      <bool>false</bool>
@@ -53,6 +53,9 @@
      </attribute>
     </widget>
     <widget class="ProfilesWidget" name="profiles">
+     <property name="styleSheet">
+      <string notr="true"> </string>
+     </property>
      <attribute name="title">
       <string>Profiles</string>
      </attribute>
@@ -60,6 +63,14 @@
     <widget class="HistoryWidget" name="history">
      <attribute name="title">
       <string>History</string>
+     </attribute>
+    </widget>
+    <widget class="RecoWidget" name="recomen">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <attribute name="title">
+      <string>Recommendation</string>
      </attribute>
     </widget>
    </widget>
@@ -98,6 +109,12 @@
    <class>HistoryWidget</class>
    <extends>QWidget</extends>
    <header>historywidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>RecoWidget</class>
+   <extends>QWidget</extends>
+   <header>recowidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QTimer>
 #include <QFrame>
+#include <QString>
 
 namespace Ui {
 class MeasureWidget;
@@ -28,13 +29,16 @@ private slots:
 
 private:
     Ui::MeasureWidget *ui;
-    QTimer measureTimeout;
+    QTimer measureTimeout; //allows to set in constructor
     QTimer measureTimer;
     void initMeasure();
     void setPoints();
     QFrame* points[24];
+    std::string pointNames[12];
+    std::string pointSides[2];
     std::array<int, 24> reading;
     int pointNum;
+    void sendNextPoint();
 };
 
 #endif // MEASUREWIDGET_H

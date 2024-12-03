@@ -23,7 +23,10 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background: qlineargradient(spread:pad, x1:0.493074, y1:0.818182, x2:0.487685, y2:0.153409, stop:0 rgba(240, 77, 21, 255), stop:0.881773 rgba(244, 131, 0, 255))</string>
+    <string notr="true"/>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
    </property>
    <widget class="QWidget" name="errorPage">
     <property name="styleSheet">
@@ -43,10 +46,10 @@
 border-radius: 20px;</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::Shape::StyledPanel</enum>
+      <enum>QFrame::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Shadow::Raised</enum>
+      <enum>QFrame::Raised</enum>
      </property>
      <widget class="QLabel" name="errorLabel">
       <property name="geometry">
@@ -65,7 +68,7 @@ color: darkorange;</string>
        <string>ABCD</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QPushButton" name="okButton">
@@ -148,10 +151,10 @@ border-radius: 20px;</string>
       </rect>
      </property>
      <property name="frameShape">
-      <enum>QFrame::Shape::StyledPanel</enum>
+      <enum>QFrame::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Shadow::Raised</enum>
+      <enum>QFrame::Raised</enum>
      </property>
      <widget class="QLabel" name="graphLabel">
       <property name="geometry">
@@ -734,10 +737,10 @@ background: none;</string>
        <string notr="true">background-color: darkorange;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
      </widget>
      <widget class="QFrame" name="point2">
@@ -753,10 +756,10 @@ background: none;</string>
        <string notr="true">background-color: darkorange;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
      </widget>
      <widget class="QFrame" name="point3">
@@ -772,10 +775,10 @@ background: none;</string>
        <string notr="true">background-color: darkorange;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
      </widget>
      <widget class="QFrame" name="point4">
@@ -791,10 +794,10 @@ background: none;</string>
        <string notr="true">background-color: darkorange;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
      </widget>
      <widget class="QFrame" name="point5">
@@ -810,10 +813,10 @@ background: none;</string>
        <string notr="true">background-color: darkorange;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
      </widget>
      <widget class="QFrame" name="point6">
@@ -829,10 +832,10 @@ background: none;</string>
        <string notr="true">background-color: darkorange;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
      </widget>
      <widget class="QFrame" name="point7">
@@ -848,10 +851,10 @@ background: none;</string>
        <string notr="true">background-color: darkorange;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
      </widget>
      <widget class="QFrame" name="point8">
@@ -867,10 +870,10 @@ background: none;</string>
        <string notr="true">background-color: darkorange;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
      </widget>
      <widget class="QFrame" name="point9">
@@ -886,10 +889,10 @@ background: none;</string>
        <string notr="true">background-color: darkorange;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
      </widget>
      <widget class="QFrame" name="point10">
@@ -905,10 +908,10 @@ background: none;</string>
        <string notr="true">background-color: darkorange;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
      </widget>
      <widget class="QFrame" name="point11">
@@ -924,10 +927,10 @@ background: none;</string>
        <string notr="true">background-color: darkorange;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
      </widget>
      <widget class="QFrame" name="point12">
@@ -943,10 +946,10 @@ background: none;</string>
        <string notr="true">background-color: darkorange;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
      </widget>
      <widget class="QFrame" name="point13">
@@ -962,10 +965,10 @@ background: none;</string>
        <string notr="true">background-color: darkorange;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
      </widget>
      <widget class="QFrame" name="point14">
@@ -981,10 +984,10 @@ background: none;</string>
        <string notr="true">background-color: darkorange;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
      </widget>
      <widget class="QFrame" name="point15">
@@ -1000,10 +1003,10 @@ background: none;</string>
        <string notr="true">background-color: darkorange;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
      </widget>
      <widget class="QFrame" name="point16">
@@ -1019,10 +1022,10 @@ background: none;</string>
        <string notr="true">background-color: darkorange;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
      </widget>
      <widget class="QFrame" name="point17">
@@ -1038,10 +1041,10 @@ background: none;</string>
        <string notr="true">background-color: darkorange;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
      </widget>
      <widget class="QFrame" name="point18">
@@ -1057,10 +1060,10 @@ background: none;</string>
        <string notr="true">background-color: darkorange;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
      </widget>
      <widget class="QFrame" name="point19">
@@ -1076,10 +1079,10 @@ background: none;</string>
        <string notr="true">background-color: darkorange;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
      </widget>
      <widget class="QFrame" name="point20">
@@ -1095,10 +1098,10 @@ background: none;</string>
        <string notr="true">background-color: darkorange;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
      </widget>
      <widget class="QFrame" name="point21">
@@ -1114,10 +1117,10 @@ background: none;</string>
        <string notr="true">background-color: darkorange;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
      </widget>
      <widget class="QFrame" name="point22">
@@ -1133,10 +1136,10 @@ background: none;</string>
        <string notr="true">background-color: darkorange;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
      </widget>
      <widget class="QFrame" name="point23">
@@ -1152,10 +1155,10 @@ background: none;</string>
        <string notr="true">background-color: darkorange;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
      </widget>
      <widget class="QFrame" name="point24">
@@ -1171,10 +1174,10 @@ background: none;</string>
        <string notr="true">background-color: darkorange;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
      </widget>
     </widget>

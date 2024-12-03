@@ -4,6 +4,7 @@
 #include <array>
 #include <cstdlib>
 #include <ctime>
+#include <string>
 
 class RadotechWidget;
 
@@ -16,11 +17,14 @@ public:
     static std::array<int, 24> getReading();
     static bool on();
     static bool skinOn();
-    static void toggleSkin();
+    static void showPoint(std::string);
+    static bool simulating();
+    static void skinOff();
 
 private:
     static bool isOn;
     static bool onSkin;
+    static bool simulate;
     static int battery;
     static RadotechWidget* widget;
 
