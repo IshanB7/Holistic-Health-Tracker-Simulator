@@ -6,6 +6,11 @@
 > Alex Gale : 101273250<br>
 > John Williams : 101108045 
 
+## Individual Contributions 
+- **Ishan Bhalla** - implemented App, Profile, Radotech, MeasureWidget, ProfilesWidget, the bar graph tab of HistoryWidget, and did the two sequence diagrams
+- **Alex Gale** -
+- **John Williams** -
+
 ## Download and run project
 
 ```
