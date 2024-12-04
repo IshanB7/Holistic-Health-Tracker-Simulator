@@ -35,6 +35,8 @@
 +--- /diagrams/                     # diagrams as images
 |    +--- seq1.png
 |    +--- seq2.png
+|    +--- classDiagram.png
+|    +--- useCaseDiagram.png
 +--- /Project/                      # source code
 |    +--- .gitignore
 |    +--- App.cpp
