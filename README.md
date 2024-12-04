@@ -8,8 +8,8 @@
 
 ## Individual Contributions 
 - **Ishan Bhalla** - implemented App, Profile, Radotech, MeasureWidget, ProfilesWidget, the bar graph tab of HistoryWidget, and did the two sequence diagrams
-- **Alex Gale** -
-- **John Williams** -
+- **Alex Gale** - 
+- **John Williams** -implmeneted Recommended, the circle chart tab of HistoryWidget, use cases and it's diagram, class diagram and recorded the video demonstartion. 
 
 ## Download and run project
 
@@ -35,6 +35,8 @@
 +--- /diagrams/                     # diagrams as images
 |    +--- seq1.png
 |    +--- seq2.png
+|    +--- classDiagram.png
+|    +--- useCaseDiagram.png
 +--- /Project/                      # source code
 |    +--- .gitignore
 |    +--- App.cpp
