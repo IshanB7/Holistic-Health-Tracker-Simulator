@@ -100,4 +100,6 @@
 |              +--- leftlung.png            
 |              +--- rightkidney.png
 ```
-### [Video](https://youtu.be/19oVQvr4T-Y) 
+
+## Link to video demonstration
+[Video](https://youtu.be/19oVQvr4T-Y) 
