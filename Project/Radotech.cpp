@@ -9,8 +9,8 @@ RadotechWidget* Radotech::widget = nullptr;
 
 Radotech::Radotech(RadotechWidget* rw) { widget = rw; }
 
+// getters
 bool Radotech::on() { return isOn; }
-
 bool Radotech::skinOn() { return onSkin; }
 
 // generates random points for reading
@@ -45,10 +45,11 @@ std::array<int, 24> Radotech::getReading() {
     return readings;
 }
 
-void Radotech::showPoint(std::string pointName) {
-    widget->setPointLabel(pointName);
-}
+// tells RadotechWidget what point MeasureWidget is currently on
+void Radotech::showPoint(std::string pointName) { widget->setPointLabel(pointName); }
 
+// getter for simulate
 bool Radotech::simulating() { return simulate; }
 
+// setter for skin off, for when a point has been measured
 void Radotech::skinOff() { onSkin = false; }

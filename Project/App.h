@@ -16,8 +16,7 @@ public:
     static void addProfile(std::string, bool, short, short);
 
 private:
-    // TODO: refactor so that the enumber of profiles is not hardcoded to 5
-    // This value is also assumed in other classes so they will also need to be modified
+    // list of all profiles and one active profile
     static Profile* profiles[5];
     static Profile* current;
 

@@ -5,6 +5,7 @@
 Profile* App::profiles[5] = {nullptr};
 Profile* App::current = nullptr;
 
+// instantiate the app, comes with one profile and a reading for the profile
 App::App() {
     profiles[0] = new Profile("Demo", false, 45, 145);
     for (int i = 1; i < 5; ++i) profiles[i] = nullptr;
@@ -20,6 +21,7 @@ App::~App() {
 
 Profile* App::user() { return current; }
 
+// returns a list of all created profiles as a vector
 std::vector<Profile *> App::users() {
     std::vector<Profile *> returnVector;
     for (int i = 0; i < 5; ++i) {
@@ -31,13 +33,13 @@ std::vector<Profile *> App::users() {
     return returnVector;
 }
 
-void App::setCurrentProfile(Profile* p) {
-    current = p;
-}
+// set another profile as active
+void App::setCurrentProfile(Profile* p) { current = p; }
 
 void App::removeProfile(Profile* p) {
     int i = 0;
 
+    // remove the profile that matches the pointer
     for (; i < 5; ++i) {
         if (profiles[i] == p) {
             delete profiles[i];
@@ -45,6 +47,7 @@ void App::removeProfile(Profile* p) {
         }
     }
 
+    // shift everything left
     for (; i < 4; ++i) { profiles[i] = profiles[i+1]; }
     profiles[4] = nullptr;
 
