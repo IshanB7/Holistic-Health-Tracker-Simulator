@@ -33,10 +33,11 @@
 +--- README.md 
 +--- Team13Project.pdf              # diagrams and written explanations
 +--- /diagrams/                     # diagrams as images
-|    +--- seq1.png
-|    +--- seq2.png
+|    +--- regularSequence.png
+|    +--- safetySequence.png
 |    +--- classDiagram.png
 |    +--- useCaseDiagram.png
+|    +--- stateDiagram.png
 +--- /Project/                      # source code
 |    +--- .gitignore
 |    +--- App.cpp
