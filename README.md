@@ -33,7 +33,7 @@
 +--- README.md 
 +--- Team13Project.pdf              # diagrams and written explanations
 +--- /diagrams/                     # diagrams as images
-|    +--- regularSequence.png
+|    +--- mainSequence.png
 |    +--- safetySequence.png
 |    +--- classDiagram.png
 |    +--- useCaseDiagram.png
