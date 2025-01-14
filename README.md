@@ -3,7 +3,7 @@
 ## Download and run project
 
 ```
-- git clone https://github.com/IshanB7/COMP3004-Project.git
+- git clone https://github.com/IshanB7/Holistic-Health-Tracker-Simulator
 - If Project.pro.user file exists exists in /Project/ directory, delete it
 - Open Project.pro in Qt and run it
 ```
@@ -88,6 +88,3 @@
 |              +--- leftlung.png            
 |              +--- rightkidney.png
 ```
-
-## Link to video demonstration
-[Video](https://youtu.be/19oVQvr4T-Y) 
