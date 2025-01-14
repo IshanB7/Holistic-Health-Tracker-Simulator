@@ -20,11 +20,6 @@
 ```
 /Holistic-Health-Tracker-Simulator/
 +--- README.md 
-|    +--- mainSequence.png
-|    +--- safetySequence.png
-|    +--- classDiagram.png
-|    +--- useCaseDiagram.png
-|    +--- stateDiagram.png
 +--- /Project/                      # source code
 |    +--- .gitignore
 |    +--- App.cpp
